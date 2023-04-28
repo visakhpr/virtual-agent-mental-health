@@ -1,0 +1,145 @@
+version: "3.1"
+
+nlu:
+# email
+- regex: email_address
+  examples: |
+    - [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+# mobile number
+- regex: mobile_number
+  examples: |
+    - \b\d{10}\b
+- intent: yes_email
+  examples: |
+    - Yes, I have an email address
+    - I do have a working email address.
+- intent: no_email
+  examples: |
+    - No, I don't have an email address
+    - I don't have a working email address.
+- intent: contact
+  examples: |
+    - my email is [visakh@example.com](email_address)
+    - [visakh@gmail.com](email_address)
+    - My mobile number is [1234567890](mobile_number)
+    - [9898989898](mobile_number)
+    - I can be reached at [8765432109](mobile_number)
+    - I'm from [Ernakulam](district)
+    - My location is [Trivandrum](district)
+    - I live in [Wayanad](district)
+    - [Kollam](district)
+
+# name
+- intent : provide_name
+  examples: |
+    - I am [Visakh](name)
+    - My name is [Meena](name)
+    - [subin](name)
+    - call me [ajay](name)
+    - myself [arjun](name)
+    - I go by the name of [Anoop](name)
+    - [sreejith](name) is what people call me
+    - You can call me [Fawas](name)
+    - I am [Rafeek](name)
+    - My name is [Ardra](name)
+# age
+- regex: age
+  examples: |
+    - ^(1[0-9]{1,2}|[1-9][0-9]|[1-9])$
+- intent: provide_age
+  examples: |
+    - I am [23](age)
+    - [30](age)
+    - [30](age) years old
+    - My age is [25](age) years old.
+    - I am currently [42](age) years young.
+    - [27](age) years of age.
+    - I am [44](age) years of age.
+    - Sure, I'm [25](age) years old.
+
+# gender
+- intent: select_gender
+  examples: |
+    - I am a [male](gender)
+    - [female](gender)
+
+# marital status
+- intent: select_marital_status
+  examples: |
+    - [Unmarried](marital_status)
+    - [Widowed](marital_status)
+    - [Divorced](marital_status)
+    - [Married](marital_status)
+    - I am [single](marital_status)
+    - My marital status is [married](marital_status)
+    - [Divorced](marital_status)
+    - [Widowed](marital_status)
+    - I am [married]
+    - [married](marital_status)
+    - [widowed](marital_status)
+    - [my partner is dead](marital_status)
+    - [my spouse is dead](marital_status)
+    - [divorced](marital_status) already
+    - [going to get divorced](marital_status)
+    - i am [single](marital_status)
+    - [not interested in marriage](marital_status)
+
+# education
+- intent: select_education
+  examples: |
+    - [Masters](education)
+    - [Bachelors](education)
+    - [School](education)
+    - [Doctorate](education)
+    - [Post Doctorate](education)
+    - [Diploma](education)
+    - [No formal education](education)
+    - I have completed my [bachelors](education) degree
+    - I am a [masters](education) degree holder
+    - [High School](education)
+    - i have completed [high school](education)
+    - completed [higher secondary](education)
+    - passed [elementary school](education)
+    - completed my [bachelors in mathematics](education)
+    - [completed BCA](education)
+    - [bachelors in psychology](education)
+    - [masters in mathematics](education)
+    - [masters in data analytics](education)
+    - [masters in psychology](education)
+    - [completed my PhD](education)
+    - [doctorate in physiscs](education)
+    - [doctorate in mathematics](education)
+    - [post doctorate in physics](education)
+    - [post doctoral fellow](education)
+    - [not attended school](education)
+    - [do not have any formal education](education)
+    - [completed my diploma](education)
+    - [diploma in management](education)
+    
+# occupation
+- intent: give_job_title
+  examples: |
+    - I am working as a [research intern](job_title)
+    - I am working as a [data analyst](job_title)
+    - I am working as a [doctor](job_title)
+    - I am working as a [data_scientist](job_title)
+    - I hold the position of [research intern](job_title)
+    - My current job is [research intern](job_title)
+    - I work as a [data_scientist](job_title)
+    - My profession is [research intern](job_title)
+    - I am employed as a [data analyst](job_title)
+    - I am a [doctor](job_title) by trade.
+    - I have a job title of [research intern](job_title)
+    - You can call me [data_scientist](job_title)
+    - As a [job_title], I am responsible for [research intern](job_title)
+    - I specialize as a [research intern](job_title)
+    - I am a [professor](job_title)
+    - [Research intern](job_title)
+    - [student](job_title)
+    - [doctor](job_title)
+    - [actress](job_title)
+    - [chef](job_title)
+    - [writer](job_title)
+    - [data analyst](job_title)
+    - [data_scientist](job_title)
+    - [business analyst](job_title)

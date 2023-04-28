@@ -1,0 +1,70 @@
+{
+    "Question": "Have you been prescribed any medications by your healthcare provider recently?",
+    "Answer": "/deny"
+}{
+    "Question": "Can you please tell me if you've ever talked to a psychologist or counselor about your mental health?",
+    "Answer": "/affirm"
+}{
+    "Question": "What do you think about when you are sad?",
+    "Answer": "tend to have negative thoughts about myself, like feeling worthless or inadequate."
+}{
+    "Question": "Do you ever feel like you're stuck with certain thoughts or images that won't go away no matter how hard you try?",
+    "Answer": "Sometimes, there are memories or images that just keep replaying in my mind, no matter how hard I try to push them away"
+}{
+    "Question": "Have you ever experienced worry or fear related to a specific situation?",
+    "Answer": "Yes, I am feeling pretty anxious lately"
+}{
+    "Question": "May I know what brings you here today?",
+    "Answer": "don't feel like doing anything"
+}{
+    "Question": "What factors do you believe may be contributing to your problems?",
+    "Answer": "I believe my problems come from a lack of motivation and direction in my life"
+}{
+    "Question": "How do you plan to get help for your problem?",
+    "Answer": "I'm not sure yet. I'm hoping you can guide me in the right direction"
+}{
+    "Question": "Are there any personal convictions or values that are particular to you?",
+    "Answer": "Yes, there are definitely some beliefs that I hold that not everyone agrees with"
+}{
+    "Question": "Have you ever felt like you're on a different wavelength from those around you?",
+    "Answer": "I definitely feel like I've changed a lot over the years"
+}{
+    "Question": "Consider the first scenario of finding a stamped, addressed envelope on the street, how would you react?",
+    "Answer": "/ignoring"
+}{
+    "Question": "Are you sensing that things are not natural or realistic to you?",
+    "Answer": "Yes, it's like I'm watching myself from a distance"
+}{
+    "Question": "Do you ever get the sense that someone or a group has malicious intentions towards you?",
+    "Answer": "haven't had any reason to believe that anyone wants to harm me"
+}{
+    "Question": "Have you ever experienced  any perceptual anomalies, like hearing noises or seeing colors that don't seem to come from the outside world?",
+    "Answer": "feel like lights are flashing in front of me"
+}{
+    "Question": "Do you sometimes perceive muffled noises or shadows as something they're not?",
+    "Answer": "Yes, I have definitely misinterpreted muffled noises before"
+}{
+    "Question": "Second scenario is how would you react if you smelled smoke while at the movie theater?",
+    "Answer": "/wait"
+}{
+    "Question": "Have you ever thought of committing suicide?",
+    "Answer": "/affirm"
+}{
+    "Question": "Do you consider doing someone else harm or seeking retaliation from those who have harmed you?",
+    "Answer": "/deny"
+}{
+    "Question": "If it is ok could you please tell whether you drink alcohol?",
+    "Answer": "/affirm"
+}{
+    "Question": "Have you ever felt that you should Cut down on your drinking?",
+    "Answer": "/deny_Cage"
+}{
+    "Question": "Have people Annoyed you by criticizing your drinking?",
+    "Answer": "/deny_Cage"
+}{
+    "Question": "Have you ever felt bad or Guilty about your drinking?",
+    "Answer": "/deny_Cage"
+}{
+    "Question": "Have you ever had a drink first thing in the morning to steady you nerves or get rid of a hangover(Eye-opener)?",
+    "Answer": "/deny_Cage"
+}

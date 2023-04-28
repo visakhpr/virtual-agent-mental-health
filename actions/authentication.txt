@@ -1,0 +1,146 @@
+YOUR_GMAIL_USERNAME = "visakhachu222@gmail.com"
+YOUR_GMAIL_PASSWORD = "LifetoDeath@2000"
+
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet
+from rasa_sdk.executor import CollectingDispatcher
+import random
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+# Commenting this out since we're not using it in this code library for sending otp to mobile number
+#from twilio.rest import Client
+
+class ActionSendOTP(Action):
+    def name(self) -> Text:
+        return "action_send_otp"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        contact = tracker.get_slot("contact")
+        # Generate an OTP and send it to the user's contact info
+        otp = random.randint(1000, 9999)
+        
+        if "@" in contact:
+            # Send OTP to email
+            message = f"Your OTP is: {otp}"
+            self.send_email(contact, message)
+            dispatcher.utter_message(text="An OTP has been sent to your email address.")
+        else:
+            # Send OTP to mobile number
+            # Commenting this out since we're not using it in this code
+            #self.send_sms(contact, otp)
+            dispatcher.utter_message(text="An OTP has been sent to your mobile number.")
+        
+        return [SlotSet("otp", otp)]
+
+    def send_email(self, to_email, message):
+        # Setup SMTP connection
+        smtp_server = "smtp.gmail.com"
+        smtp_port = 587
+        smtp_username = "YOUR_GMAIL_USERNAME"
+        smtp_password = "YOUR_GMAIL_PASSWORD"
+        sender_email = smtp_username
+        
+        msg = MIMEMultipart()
+        msg['From'] = sender_email
+        msg['To'] = to_email
+        msg['Subject'] = "OTP Verification"
+        msg.attach(MIMEText(message, 'plain'))
+        
+        try:
+            server = smtplib.SMTP(smtp_server, smtp_port)
+            server.starttls()
+            server.login(smtp_username, smtp_password)
+            text = msg.as_string()
+            server.sendmail(sender_email, to_email, text)
+            server.quit()
+            return True
+        except Exception as e:
+            print(e)
+            return False
+
+    # def send_sms(self, to_phone, otp):
+    #     # Setup Twilio connection
+    #     account_sid = 'YOUR_TWILIO_ACCOUNT_SID'
+    #     auth_token = 'YOUR_TWILIO_AUTH_TOKEN'
+    #     client = Client(account_sid, auth_token)
+        
+    #     message = client.messages.create(
+    #         body=f"Your OTP is: {otp}",
+    #         from_='YOUR_TWILIO_PHONE_NUMBER',
+    #         to=to_phone
+    #     )
+        
+    #     if message.sid:
+    #         return True
+    #     else:
+    #         return False
+
+
+class ActionValidateOTP(Action):
+    def name(self) -> Text:
+        return "action_validate_otp"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        user_otp = tracker.get_slot("user_otp")
+        generated_otp = tracker.get_slot("otp")
+        
+        if user_otp == str(generated_otp):
+            # OTP validation successful
+            dispatcher.utter_message(text="OTP validation successful.")
+            return [SlotSet("contact_valid", True)]
+        else:
+            # OTP validation failed
+            dispatcher.utter_message(text="Invalid OTP. Please try again.")
+            return [SlotSet("contact_valid", False)]
+        
+class ActionCheckRegistered(Action):
+    def name(self) -> Text:
+        return "action_check_registered"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        contact_valid = tracker.get_slot("contact_valid")
+        contact = tracker.get_slot("contact")
+        
+        if contact_valid:
+            # Check if user is registered
+            is_registered = check_if_registered(contact)
+            
+            if is_registered:
+                dispatcher.utter_message(text="You are already registered.")
+                return [SlotSet("registered", True)]
+            else:
+                dispatcher.utter_message(text="You are not registered.")
+                return [SlotSet("registered", False)]
+        else:
+            dispatcher.utter_message(text="Please enter a valid email or mobile number.")
+            return [SlotSet("registered", False)]
+
+class ActionStartRegistration(Action):
+    def name(self) -> Text:
+        return "action_start_registration"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        registered = tracker.get_slot("registered")
+        
+        if registered:
+            # User is already registered, ask if they want to continue where they left off
+            dispatcher.utter_message(text="Do you want to continue where you left off?")
+            return [SlotSet("continue_registration", True)]
+        else:
+            # User is not registered, ask for basic details
+            dispatcher.utter_message(text="Please provide your basic details.")
+            return [SlotSet("continue_registration", False)]

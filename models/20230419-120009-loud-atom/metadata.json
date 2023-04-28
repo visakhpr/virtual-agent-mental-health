@@ -1,0 +1,1747 @@
+{
+  "domain": {
+    "version": "3.1",
+    "intents": [
+      "affirm",
+      "affirm_Cage",
+      "angry",
+      "angry_thought",
+      "anxiety",
+      "anxiety_thought",
+      "bore",
+      "bore_thought",
+      "confused",
+      "confused_thought",
+      "contact",
+      "delusions",
+      "deny",
+      "deny_Cage",
+      "destroy",
+      "different",
+      "give_job_title",
+      "goodbye",
+      "greet",
+      "hallucinations",
+      "happy",
+      "happy_thought",
+      "harm_you",
+      "help_problems",
+      "homicidal",
+      "ignoring",
+      "illusions",
+      "images_or_thoughts",
+      "leave",
+      "login",
+      "medications_details",
+      "no_email",
+      "normal",
+      "normal_thought",
+      "open_letter",
+      "otp",
+      "problems",
+      "problems_cause",
+      "provide_age",
+      "provide_name",
+      "psychologist_consultation",
+      "right_response",
+      "sad",
+      "sad_thought",
+      "scared",
+      "select_education",
+      "select_gender",
+      "select_marital_status",
+      "signup",
+      "stress",
+      "stress_thought",
+      "suicidal",
+      "unnatural",
+      "wait",
+      "yes_email"
+    ],
+    "entities": [
+      "email_address",
+      "mobile_number",
+      "name",
+      "age",
+      "gender",
+      "education",
+      "job_title",
+      "marital_status",
+      "district"
+    ],
+    "slots": {
+      "email_address": {
+        "type": "text",
+        "mappings": [
+          {
+            "type": "from_entity",
+            "entity": "email_address"
+          }
+        ]
+      },
+      "mobile_number": {
+        "type": "float",
+        "mappings": [
+          {
+            "type": "from_entity",
+            "entity": "mobile_number"
+          }
+        ]
+      },
+      "name": {
+        "type": "text",
+        "mappings": [
+          {
+            "type": "from_entity",
+            "entity": "name"
+          }
+        ]
+      },
+      "age": {
+        "type": "float",
+        "mappings": [
+          {
+            "type": "from_entity",
+            "entity": "age"
+          }
+        ]
+      },
+      "gender": {
+        "type": "categorical",
+        "mappings": [
+          {
+            "type": "from_entity",
+            "entity": "gender"
+          }
+        ]
+      },
+      "marital_status": {
+        "type": "text",
+        "mappings": [
+          {
+            "type": "from_entity",
+            "entity": "marital_status"
+          }
+        ]
+      },
+      "education": {
+        "type": "text",
+        "mappings": [
+          {
+            "type": "from_entity",
+            "entity": "education"
+          }
+        ]
+      },
+      "district": {
+        "type": "text",
+        "mappings": [
+          {
+            "type": "from_entity",
+            "entity": "district"
+          }
+        ]
+      },
+      "job_title": {
+        "type": "text",
+        "influence_conversation": true,
+        "mappings": [
+          {
+            "type": "from_entity",
+            "entity": "job_title"
+          }
+        ]
+      }
+    },
+    "responses": {
+      "utter_greet": [
+        {
+          "text": "Hello there, I am Samanwaya."
+        },
+        {
+          "text": "Hi! I'm Samanwaya. Before we begin"
+        },
+        {
+          "text": "Good day! My name is Samanwaya."
+        },
+        {
+          "text": "Hey, I am Samanwaya."
+        },
+        {
+          "text": "Hi! Myself Samanwaya."
+        },
+        {
+          "text": "Nice to meet you. It's me, Samanwaya!"
+        },
+        {
+          "text": "Samanwaya here. To get started "
+        },
+        {
+          "text": "I'm Samanwaya and happy to assist you."
+        },
+        {
+          "text": "Greetings! It's me Samanwaya."
+        },
+        {
+          "text": "Good day! I am Samanwaya."
+        }
+      ],
+      "utter_login_signup": [
+        {
+          "text": "Please select an option",
+          "buttons": [
+            {
+              "title": "Login",
+              "payload": "/login"
+            },
+            {
+              "title": "Signup",
+              "payload": "/signup"
+            }
+          ]
+        }
+      ],
+      "utter_login": [
+        {
+          "text": "Please enter your email address or mobile number"
+        }
+      ],
+      "utter_ask_email_buttons": [
+        {
+          "text": "Do you have an email?",
+          "buttons": [
+            {
+              "title": "Yes, I have an email address",
+              "payload": "/yes_email"
+            },
+            {
+              "title": "No, I don't have an email address",
+              "payload": "/no_email"
+            }
+          ]
+        }
+      ],
+      "utter_ask_email_address": [
+        {
+          "text": "Please provide your email address"
+        }
+      ],
+      "utter_ask_mobile_number": [
+        {
+          "text": "Please enter your mobile number"
+        }
+      ],
+      "utter_ask_otp_email": [
+        {
+          "text": "Please enter otp which is sent to your email address"
+        }
+      ],
+      "utter_ask_otp_mobile_number": [
+        {
+          "text": "Please enter otp which is sent to your mobile number"
+        }
+      ],
+      "utter_otp_validation": [
+        {
+          "text": "Otp validation successfull"
+        }
+      ],
+      "utter_ask_name": [
+        {
+          "text": "Could you please tell me your name to get started?"
+        },
+        {
+          "text": "Can you please tell me your name?"
+        },
+        {
+          "text": "May I know your name, please?"
+        },
+        {
+          "text": "Can you please tell me your good name?"
+        },
+        {
+          "text": "What name can I address you with?"
+        },
+        {
+          "text": "Could you please tell your name?"
+        }
+      ],
+      "utter_ask_district": [
+        {
+          "text": "Which district are you from?"
+        }
+      ],
+      "utter_ask_age": [
+        {
+          "text": "It's a pleasure to meet you, {name}. Can you please tell me your age?"
+        },
+        {
+          "text": "Hello {name}, how old are you?"
+        },
+        {
+          "text": "Nice to see you, {name}. What is your current age?"
+        },
+        {
+          "text": "Hey {name}, it's good to have you here. May I know your age?"
+        },
+        {
+          "text": "Greetings, {name}. Do you mind sharing your age?"
+        },
+        {
+          "text": "Hello {name}, please provide your age."
+        }
+      ],
+      "utter_ask_occupation": [
+        {
+          "text": "What is your current job?"
+        },
+        {
+          "text": "Please give a brief about your occupation."
+        },
+        {
+          "text": "How would you describe your current job?"
+        }
+      ],
+      "utter_ask_education": [
+        {
+          "text": "Please select your educational qualification from the options given below:",
+          "buttons": [
+            {
+              "title": "School",
+              "payload": "/select_education{{\"education\": \"School\"}}"
+            },
+            {
+              "title": "Bachelors",
+              "payload": "/select_education{{\"education\": \"Bachelors\"}}"
+            },
+            {
+              "title": "Masters",
+              "payload": "/select_education{{\"education\": \"Masters\"}}"
+            },
+            {
+              "title": "Doctorate",
+              "payload": "/select_education{{\"education\": \"Doctorate\"}}"
+            },
+            {
+              "title": "Post Doctorate",
+              "payload": "/select_education{{\"education\": \"Post Doctorate\"}}"
+            },
+            {
+              "title": "Diploma",
+              "payload": "/select_education{{\"education\": \"Diploma\"}}"
+            },
+            {
+              "title": "No formal education",
+              "payload": "/select_education{{\"education\": \"No formal education\"}}"
+            }
+          ]
+        }
+      ],
+      "utter_ask_marital_status": [
+        {
+          "text": "Please choose your marital status from the following options?",
+          "buttons": [
+            {
+              "title": "Married",
+              "payload": "/select_marital_status{{\"marital_status\": \"Married\"}}"
+            },
+            {
+              "title": "Divorced",
+              "payload": "/select_marital_status{{\"marital_status\": \"Divorced\"}}"
+            },
+            {
+              "title": "Widowed",
+              "payload": "/select_marital_status{{\"marital_status\": \"Widowed\"}}"
+            },
+            {
+              "title": "Unmarried",
+              "payload": "/select_marital_status{{\"marital_status\": \"Unmarried\"}}"
+            }
+          ]
+        }
+      ],
+      "utter_ask_gender": [
+        {
+          "text": "Please select your gender",
+          "buttons": [
+            {
+              "title": "Male",
+              "payload": "/select_gender{{\"gender\": \"Male\"}}"
+            },
+            {
+              "title": "Female",
+              "payload": "/select_gender{{\"gender\": \"Female\"}}"
+            },
+            {
+              "title": "Transgender",
+              "payload": "/select_gender{{\"gender\": \"Transgender\"}}"
+            }
+          ]
+        }
+      ],
+      "utter_psychologist_consultation_buttons": [
+        {
+          "text": "Can you please tell me if you've ever talked to a psychologist or counselor about your mental health?",
+          "buttons": [
+            {
+              "title": "Yes, I have visited a psychologist before",
+              "payload": "/affirm"
+            },
+            {
+              "title": "No, I have not visited a psychologist before",
+              "payload": "/deny"
+            }
+          ]
+        }
+      ],
+      "utter_medications_b": [
+        {
+          "text": "Have you been prescribed any medications by your healthcare provider recently?",
+          "buttons": [
+            {
+              "title": "Yes",
+              "payload": "/affirm"
+            },
+            {
+              "title": "No",
+              "payload": "/deny"
+            }
+          ]
+        }
+      ],
+      "utter_medications_details": [
+        {
+          "text": "Could you please tell for which disease are you taking the medication?"
+        },
+        {
+          "text": "Would you kindly specify the disease for which you are taking the medication?"
+        },
+        {
+          "text": "Can you kindly let us know what disease you are taking the medicine for?"
+        }
+      ],
+      "utter_mood_inquiry_b": [
+        {
+          "text": "Hey {name}, now I would like to conduct a mental state examination by asking a few basic questions. How would you describe your mood today?",
+          "buttons": [
+            {
+              "title": "happy",
+              "payload": "/happy"
+            },
+            {
+              "title": "sad",
+              "payload": "/sad"
+            },
+            {
+              "title": "angry",
+              "payload": "/angry"
+            },
+            {
+              "title": "anxious",
+              "payload": "/anxiety"
+            },
+            {
+              "title": "stressed",
+              "payload": "/stress"
+            },
+            {
+              "title": "bored",
+              "payload": "/bore"
+            },
+            {
+              "title": "confused",
+              "payload": "/confused"
+            },
+            {
+              "title": "normal",
+              "payload": "/normal"
+            }
+          ]
+        }
+      ],
+      "utter_happy_thought": [
+        {
+          "text": "What makes you feel happiest in life?"
+        },
+        {
+          "text": "What are some of the most positive experiences or moments that you can remember?"
+        },
+        {
+          "text": "Do you have any happy memories that you like to revisit or think about from time to time?"
+        },
+        {
+          "text": "How do you typically experience happiness? Do you feel it in your body, in your thoughts, or both?"
+        },
+        {
+          "text": "Are there any particular activities or situations that tend to bring you the most joy and happiness?"
+        },
+        {
+          "text": "How do you express or share your happiness with others? Do you tend to keep it to yourself or share it with others?"
+        }
+      ],
+      "utter_sad_thought": [
+        {
+          "text": "What do you think about when you are sad?"
+        },
+        {
+          "text": "What goes through your mind when you're feeling down?"
+        },
+        {
+          "text": "Do you have certain thoughts when you're feeling sad?"
+        },
+        {
+          "text": "Can you share what you think about when you're feeling blue?"
+        }
+      ],
+      "utter_angry_thought": [
+        {
+          "text": "What is it you think about when you are angry?"
+        },
+        {
+          "text": "What do you think about when you're really mad?"
+        },
+        {
+          "text": "Do you have certain thoughts when you're feeling angry?"
+        },
+        {
+          "text": "Can you share what goes through your mind when you're feeling furious?"
+        }
+      ],
+      "utter_anxiety_thought": [
+        {
+          "text": "What thoughts or worries come to mind when you're feeling anxious?"
+        },
+        {
+          "text": "Can you describe what happens in your mind and body when you feel anxious?"
+        },
+        {
+          "text": "What do you imagine is the worst-case scenario in the situation that's causing you anxiety? How likely do you think it is to happen?"
+        },
+        {
+          "text": "What self-talk or mental messages do you notice when you're feeling anxious?"
+        },
+        {
+          "text": "How do you typically cope with anxiety? Are there any strategies that have worked well for you in the past?"
+        },
+        {
+          "text": "Are there any particular themes or patterns in your anxious thoughts? For example, do they often relate to control, safety, or fear of judgment?"
+        }
+      ],
+      "utter_stress_thought": [
+        {
+          "text": "What thoughts or worries come to mind when you're feeling stressed?"
+        },
+        {
+          "text": "Can you describe what happens in your mind and body when you feel stressed?"
+        },
+        {
+          "text": "What do you imagine is the worst-case scenario in the situation that's causing you stress? How likely do you think it is to happen?"
+        },
+        {
+          "text": "What self-talk or mental messages do you notice when you're feeling stressed?"
+        },
+        {
+          "text": "How do you typically cope with stress? Are there any strategies that have worked well for you in the past?"
+        },
+        {
+          "text": "Are there any particular themes or patterns in your stressful thoughts? For example, do they often relate to workload, time pressure, or fear of failure?"
+        }
+      ],
+      "utter_bore_thought": [
+        {
+          "text": "What thoughts or feelings come to mind when you're feeling bored?"
+        },
+        {
+          "text": "Can you describe what's going on in your mind and body when you're feeling bored?"
+        },
+        {
+          "text": "What do you think is causing your boredom? Are there any particular situations or activities that tend to make you feel bored?"
+        },
+        {
+          "text": "Are there any particular thoughts or mental messages that tend to accompany your boredom? For example, do you often find yourself thinking 'this is so boring' or 'I wish I were doing something else'?"
+        },
+        {
+          "text": "How do you typically cope with boredom? Are there any strategies that have worked well for you in the past?"
+        },
+        {
+          "text": "Are there any particular patterns or themes in your boredom? For example, do you tend to feel bored when you're not challenged enough, or when you're not engaged with the task at hand?"
+        }
+      ],
+      "utter_confused_thought": [
+        {
+          "text": "What thoughts or feelings come to mind when you're feeling confused?"
+        },
+        {
+          "text": "Can you describe what's going on in your mind and body when you're feeling confused?"
+        },
+        {
+          "text": "What do you think is causing your confusion? Are there any particular situations or topics that tend to make you feel confused?"
+        },
+        {
+          "text": "Are there any particular thoughts or mental messages that tend to accompany your confusion? For example, do you often find yourself thinking 'I don't understand' or 'this doesn't make sense'?"
+        },
+        {
+          "text": "How do you typically cope with confusion? Are there any strategies that have worked well for you in the past?"
+        },
+        {
+          "text": "Are there any particular patterns or themes in your confusion? For example, do you tend to feel confused when faced with complex instructions, or when you're trying to learn a new skill?"
+        }
+      ],
+      "utter_normal_thought": [
+        {
+          "text": "What do you think about most often throughout the day?"
+        },
+        {
+          "text": "Are there any particular themes or patterns in your thoughts that you've noticed? For example, do you often think about work, family, or hobbies?"
+        },
+        {
+          "text": "Do you find that your thoughts tend to be more positive or negative overall?"
+        },
+        {
+          "text": "How do you typically react to your thoughts? Do you try to challenge or change them, or do you tend to accept them without judgment?"
+        },
+        {
+          "text": "Are there any particular activities or situations that tend to provoke certain thoughts or thought patterns for you?"
+        },
+        {
+          "text": "Have you noticed any changes in your thought patterns over time? If so, what do you think may have contributed to these changes?"
+        }
+      ],
+      "utter_thoughts_or_images": [
+        {
+          "text": "Do you feel that there are certain thoughts or images which are really difficult to get out of your head?"
+        },
+        {
+          "text": "Have you ever experienced persistent thoughts or images that are hard to shake off?"
+        },
+        {
+          "text": "Do you ever find yourself thinking about certain things or seeing certain images that you can't seem to get out of your mind?"
+        },
+        {
+          "text": "Are there any thoughts or images that keep replaying in your mind and you can't seem to stop them?"
+        },
+        {
+          "text": "Have you ever struggled to let go of a particular thought or image that keeps coming back to you?"
+        },
+        {
+          "text": "Do you ever feel like you're stuck with certain thoughts or images that won't go away no matter how hard you try?"
+        }
+      ],
+      "utter_scared": [
+        {
+          "text": "Have you ever got worried or scared thinking about something or other?"
+        },
+        {
+          "text": "Do you ever feel anxious or fearful thinking about something?"
+        },
+        {
+          "text": "Have you ever experienced worry or fear related to a specific situation?"
+        },
+        {
+          "text": "Do you ever feel that you get scared or worried without a clear reason?"
+        },
+        {
+          "text": "Do you get uneasy or concerned thinking about something in particular?"
+        },
+        {
+          "text": "Have you ever been frightened or apprehensive about something happening or potentially happening?"
+        }
+      ],
+      "utter_delusions": [
+        {
+          "text": "Do you hold any unique personal beliefs that diverge from others?"
+        },
+        {
+          "text": "Do you believe that there are some personal convictions that you hold that are not commonly shared by others?"
+        },
+        {
+          "text": "Do you have any individual beliefs that are not widely held by others?"
+        },
+        {
+          "text": "Have you ever felt that the personal beliefs that you hold are unconventional?"
+        },
+        {
+          "text": "Are there any ways in which your beliefs differ from those of others?"
+        },
+        {
+          "text": "Do you have any personal beliefs that are distinct from those of others?"
+        },
+        {
+          "text": "Are there any unique beliefs you hold that are not commonly shared by others?"
+        },
+        {
+          "text": "Are there any personal convictions or values that are particular to you?"
+        },
+        {
+          "text": "Is there anything that you believe strongly that is not widely accepted by others?"
+        },
+        {
+          "text": "Are there any beliefs or opinions you hold that are different from those around you?"
+        }
+      ],
+      "utter_different": [
+        {
+          "text": "Have you ever felt disconnected from those around you?"
+        },
+        {
+          "text": "Do you ever feel like you don't quite fit in with others?"
+        },
+        {
+          "text": "Have you ever experienced a sense of detachment from your peers?"
+        },
+        {
+          "text": "Do you ever feel removed from the people in your life?"
+        },
+        {
+          "text": "Have you noticed a change in the way you relate to others?"
+        },
+        {
+          "text": "Do you ever feel like you're different from those around you?"
+        },
+        {
+          "text": "Have you ever felt like an outsider among your peers?"
+        },
+        {
+          "text": "Do you ever feel like you don't share the same experiences or values as those around you?"
+        },
+        {
+          "text": "Have you ever felt like you're on a different wavelength from those around you?"
+        },
+        {
+          "text": "Do you ever feel like you're living in a different reality than those around you?"
+        }
+      ],
+      "utter_unnatural": [
+        {
+          "text": "Are you feeling like things are unnatural or unreal?"
+        },
+        {
+          "text": "Do you perceive things as being unnatural or unreal?"
+        },
+        {
+          "text": "Are things seeming strange or unreal to you?"
+        },
+        {
+          "text": "Are you experiencing a sense of things being otherworldly or unreal?"
+        },
+        {
+          "text": "Do you feel like things are not quite right or unnatural in some way?"
+        },
+        {
+          "text": "Are you sensing that things are not natural or realistic to you?"
+        },
+        {
+          "text": "Do things seem surreal or dreamlike to you?"
+        },
+        {
+          "text": "Are you experiencing a feeling of unreality or strangeness about things?"
+        },
+        {
+          "text": "Do you feel like things are not normal or natural to you?"
+        }
+      ],
+      "utter_harm_you": [
+        {
+          "text": "Have you ever had the feeling that someone or a group of people might be out to harm you?"
+        },
+        {
+          "text": "Do you ever get the sense that someone or a group has malicious intentions towards you?"
+        },
+        {
+          "text": "Have you ever felt like there are individuals or a group who want to cause harm to you?"
+        },
+        {
+          "text": "Do you ever feel like you are a target of someone or a group's harmful intentions?"
+        },
+        {
+          "text": "Have you ever felt like you are in danger because of someone or a group's intentions towards you?"
+        },
+        {
+          "text": "Have you ever felt like your thoughts are being stolen or tampered with by other people?"
+        },
+        {
+          "text": "Have you ever had the feeling that someone is manipulating your thoughts or inserting their own into your head?"
+        },
+        {
+          "text": "Do you ever feel like your thoughts are not your own and someone else is controlling them?"
+        },
+        {
+          "text": "Do you ever feel like someone is taking control of your mind and making you think things you don't want to think?"
+        }
+      ],
+      "utter_hallucinations": [
+        {
+          "text": "Have you ever experienced hallucinations, like hearing voices or seeing things that aren't actually there?"
+        },
+        {
+          "text": "Do you ever perceive sensory experiences that others can't, like seeing things that aren't physically present?"
+        },
+        {
+          "text": "Have you ever had the sensation of smelling, tasting, or feeling something that isn't actually there?"
+        },
+        {
+          "text": "Have you ever experienced  any perceptual anomalies, like hearing noises or seeing colors that don't seem to come from the outside world?"
+        },
+        {
+          "text": "Do you ever have sensory experiences that you know aren't real, like hearing voices or seeing things that others can't perceive?"
+        },
+        {
+          "text": "Have you ever had an experience where you sensed something that wasn't actually there like hearing voices or seeing things?"
+        }
+      ],
+      "utter_illusions": [
+        {
+          "text": "Have you ever mistaken muffled noises or shadows for something else?"
+        },
+        {
+          "text": "Do you sometimes perceive muffled noises or shadows as something other than what they really are?"
+        },
+        {
+          "text": "Have you ever been confused by muffled noises or shadows, thinking they were something else?"
+        },
+        {
+          "text": "Do you occasionally misinterpret muffled noises or shadows as something they're not?"
+        },
+        {
+          "text": "Have you ever had the experience of mistaking muffled noises or shadows for something different than what they actually were?"
+        },
+        {
+          "text": "Do you sometimes perceive muffled noises or shadows as something they're not?"
+        },
+        {
+          "text": "Have you ever had a moment where you thought you heard or saw something, only to realize it was just a muffled noise or shadow?"
+        },
+        {
+          "text": "Do you ever mistake muffled noises or shadows for something that they aren't in reality?"
+        }
+      ],
+      "utter_problems": [
+        {
+          "text": "Could you please tell what's bothering you today?"
+        },
+        {
+          "text": "Can you tell me what's wrong?"
+        },
+        {
+          "text": "May I know what brings you here today?"
+        },
+        {
+          "text": "How can I assist you with your concerns?"
+        },
+        {
+          "text": "Can you describe the problem you're experiencing?"
+        },
+        {
+          "text": "Could you please tell what brought you in here today?"
+        }
+      ],
+      "utter_problems_cause": [
+        {
+          "text": "How do you interpret the cause of your problems?"
+        },
+        {
+          "text": "What factors do you believe may be contributing to your problems?"
+        },
+        {
+          "text": "Can you share your thoughts on what might be causing your problems?"
+        },
+        {
+          "text": "What do you think might be the root cause of your problems?"
+        },
+        {
+          "text": "Have you considered any potential causes for your difficulties?"
+        },
+        {
+          "text": "In your opinion, what could be causing your problems?"
+        },
+        {
+          "text": "From your perspective, what do you think is the cause of your problem?"
+        },
+        {
+          "text": "Can you offer any insights into what may be causing your problems?"
+        }
+      ],
+      "utter_help_problems": [
+        {
+          "text": "How do you plan to get help for your problem?"
+        }
+      ],
+      "utter_judgement_questions": [
+        {
+          "text": "Consider the following scenarios:"
+        },
+        {
+          "text": "Now, let's play a small game. I would be asking two questions. Imagine the following scenarios:"
+        },
+        {
+          "text": "Now, let's have a small activity. Think of the following scenarios:"
+        }
+      ],
+      "utter_stamped_letter_b": [
+        {
+          "text": "Consider the first scenario of finding a stamped, addressed envelope on the street, how would you react?",
+          "buttons": [
+            {
+              "title": "post the envelope at the nearest letter box",
+              "payload": "/right_response"
+            },
+            {
+              "title": "destroy the envelope and then walk away",
+              "payload": "/destroy"
+            },
+            {
+              "title": "ignore the envelope",
+              "payload": "/ignoring"
+            },
+            {
+              "title": "send the letter to the sender itself after opening the letter",
+              "payload": "/open_letter"
+            }
+          ]
+        }
+      ],
+      "utter_movie_theater_smoke_b": [
+        {
+          "text": "Second scenario is how would you react if you smelled smoke while at the movie theater?",
+          "buttons": [
+            {
+              "title": "ignore the smoke",
+              "payload": "/ignoring"
+            },
+            {
+              "title": "stay calm, use the fire alarm to alert other people and inform the authorities",
+              "payload": "/right_response"
+            },
+            {
+              "title": "leave the movie theater immediately",
+              "payload": "/leave"
+            },
+            {
+              "title": "just wait for someone else to respond",
+              "payload": "/wait"
+            }
+          ]
+        }
+      ],
+      "utter_judgement_response": [
+        {
+          "text": "Your insight is being noted"
+        },
+        {
+          "text": "Your response is noted"
+        },
+        {
+          "text": "Response saved"
+        }
+      ],
+      "utter_suicidal_buttons": [
+        {
+          "text": "Have you ever thought of committing suicide?",
+          "buttons": [
+            {
+              "title": "Yes, I felt like committing suicide",
+              "payload": "/affirm"
+            },
+            {
+              "title": "No, I have never thought on committing suicide",
+              "payload": "/deny"
+            }
+          ]
+        }
+      ],
+      "utter_very_personal": [
+        {
+          "text": "Could you please give a little more insight on that?"
+        },
+        {
+          "text": "If you are ok, could you please provide a little more detail about it."
+        },
+        {
+          "text": "If it is ok, could you please provide a little more detail on that."
+        }
+      ],
+      "utter_homicidal": [
+        {
+          "text": "Do you think about hurting others or getting even with people who have wronged you?"
+        },
+        {
+          "text": "Have you had desires to hurt others?"
+        }
+      ],
+      "utter_homicidal_buttons": [
+        {
+          "text": "Do you consider doing someone else harm or seeking retaliation from those who have harmed you?",
+          "buttons": [
+            {
+              "title": "Yes, I have felt like hurting others who have wronged me",
+              "payload": "/affirm"
+            },
+            {
+              "title": "No, I do not believe in hurting others",
+              "payload": "/deny"
+            }
+          ]
+        }
+      ],
+      "utter_alcohol_consumption_buttons": [
+        {
+          "text": "If it is ok could you please tell whether you drink alcohol?",
+          "buttons": [
+            {
+              "title": "Yes, I drink alcohol",
+              "payload": "/affirm"
+            },
+            {
+              "title": "No, I do not consume alcohol",
+              "payload": "/deny"
+            }
+          ]
+        }
+      ],
+      "utter_CutDown_buttons": [
+        {
+          "text": "Have you ever felt that you should Cut down on your drinking?",
+          "buttons": [
+            {
+              "title": "Yes, I have felt that I should cut down my drinking",
+              "payload": "/affirm_Cage"
+            },
+            {
+              "title": "No, I have not felt that I should cut down my drinking",
+              "payload": "/deny_Cage"
+            }
+          ]
+        }
+      ],
+      "utter_Annoyed_buttons": [
+        {
+          "text": "Have people Annoyed you by criticizing your drinking?",
+          "buttons": [
+            {
+              "title": "Yes, I get annoyed when people criticize on my drinking",
+              "payload": "/affirm_Cage"
+            },
+            {
+              "title": "No, I don't get annoyed when people criticize on my drinking",
+              "payload": "/deny_Cage"
+            }
+          ]
+        }
+      ],
+      "utter_Guilty_buttons": [
+        {
+          "text": "Have you ever felt bad or Guilty about your drinking?",
+          "buttons": [
+            {
+              "title": "Yes, I feel bad about my drinking",
+              "payload": "/affirm_Cage"
+            },
+            {
+              "title": "No, I don't feel bad about my drinking",
+              "payload": "/deny_Cage"
+            }
+          ]
+        }
+      ],
+      "utter_EyeOpener_buttons": [
+        {
+          "text": "Have you ever had a drink first thing in the morning to steady you nerves or get rid of a hangover(Eye-opener)?",
+          "buttons": [
+            {
+              "title": "Yes, I will have a drink as first thing in the morning to steady my nerves or get rid of my haangover",
+              "payload": "/affirm_Cage"
+            },
+            {
+              "title": "No, I will never have a drink as first thing in the morning",
+              "payload": "/deny_Cage"
+            }
+          ]
+        }
+      ],
+      "utter_end_botresponse": [
+        {
+          "text": "Thank you for your responses. Your mental state examination is over. It was nice talking to you. Bye"
+        },
+        {
+          "text": "Thank you for your time. We have reached the end of your mental state examination. Take care and stay safe."
+        }
+      ]
+    },
+    "actions": [
+      {
+        "action_extract_keywords": {
+          "send_domain": true
+        }
+      },
+      {
+        "action_save_slot_values": {
+          "send_domain": true
+        }
+      },
+      {
+        "action_save_qa": {
+          "send_domain": true
+        }
+      }
+    ],
+    "session_config": {
+      "session_expiration_time": 60,
+      "carry_over_slots_to_new_session": true
+    }
+  },
+  "trained_at": "2023-04-19T06:35:14.181591",
+  "model_id": "941eb2a152b64c89a68deb860fcc1d98",
+  "assistant_id": "20230410-093831-plain-headset",
+  "rasa_open_source_version": "3.5.4",
+  "train_schema": {
+    "nodes": {
+      "schema_validator": {
+        "needs": {
+          "importer": "__importer__"
+        },
+        "uses": "rasa.graph_components.validators.default_recipe_validator.DefaultV1RecipeValidator",
+        "constructor_name": "create",
+        "fn": "validate",
+        "config": {},
+        "eager": false,
+        "is_target": false,
+        "is_input": true,
+        "resource": null
+      },
+      "finetuning_validator": {
+        "needs": {
+          "importer": "schema_validator"
+        },
+        "uses": "rasa.graph_components.validators.finetuning_validator.FinetuningValidator",
+        "constructor_name": "create",
+        "fn": "validate",
+        "config": {
+          "validate_core": true,
+          "validate_nlu": true
+        },
+        "eager": false,
+        "is_target": false,
+        "is_input": true,
+        "resource": null
+      },
+      "nlu_training_data_provider": {
+        "needs": {
+          "importer": "finetuning_validator"
+        },
+        "uses": "rasa.graph_components.providers.nlu_training_data_provider.NLUTrainingDataProvider",
+        "constructor_name": "create",
+        "fn": "provide",
+        "config": {
+          "language": "en",
+          "persist": false
+        },
+        "eager": false,
+        "is_target": false,
+        "is_input": true,
+        "resource": null
+      },
+      "run_WhitespaceTokenizer0": {
+        "needs": {
+          "training_data": "nlu_training_data_provider"
+        },
+        "uses": "rasa.nlu.tokenizers.whitespace_tokenizer.WhitespaceTokenizer",
+        "constructor_name": "load",
+        "fn": "process_training_data",
+        "config": {},
+        "eager": false,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      },
+      "train_RegexFeaturizer1": {
+        "needs": {
+          "training_data": "run_WhitespaceTokenizer0"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.regex_featurizer.RegexFeaturizer",
+        "constructor_name": "create",
+        "fn": "train",
+        "config": {},
+        "eager": false,
+        "is_target": true,
+        "is_input": false,
+        "resource": null
+      },
+      "run_RegexFeaturizer1": {
+        "needs": {
+          "training_data": "run_WhitespaceTokenizer0",
+          "resource": "train_RegexFeaturizer1"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.regex_featurizer.RegexFeaturizer",
+        "constructor_name": "load",
+        "fn": "process_training_data",
+        "config": {},
+        "eager": false,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      },
+      "train_CRFEntityExtractor2": {
+        "needs": {
+          "training_data": "run_RegexFeaturizer1"
+        },
+        "uses": "rasa.nlu.extractors.crf_entity_extractor.CRFEntityExtractor",
+        "constructor_name": "create",
+        "fn": "train",
+        "config": {},
+        "eager": false,
+        "is_target": true,
+        "is_input": false,
+        "resource": null
+      },
+      "train_LexicalSyntacticFeaturizer3": {
+        "needs": {
+          "training_data": "run_RegexFeaturizer1"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.lexical_syntactic_featurizer.LexicalSyntacticFeaturizer",
+        "constructor_name": "create",
+        "fn": "train",
+        "config": {},
+        "eager": false,
+        "is_target": true,
+        "is_input": false,
+        "resource": null
+      },
+      "run_LexicalSyntacticFeaturizer3": {
+        "needs": {
+          "training_data": "run_RegexFeaturizer1",
+          "resource": "train_LexicalSyntacticFeaturizer3"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.lexical_syntactic_featurizer.LexicalSyntacticFeaturizer",
+        "constructor_name": "load",
+        "fn": "process_training_data",
+        "config": {},
+        "eager": false,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      },
+      "train_CountVectorsFeaturizer4": {
+        "needs": {
+          "training_data": "run_LexicalSyntacticFeaturizer3"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.count_vectors_featurizer.CountVectorsFeaturizer",
+        "constructor_name": "create",
+        "fn": "train",
+        "config": {},
+        "eager": false,
+        "is_target": true,
+        "is_input": false,
+        "resource": null
+      },
+      "run_CountVectorsFeaturizer4": {
+        "needs": {
+          "training_data": "run_LexicalSyntacticFeaturizer3",
+          "resource": "train_CountVectorsFeaturizer4"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.count_vectors_featurizer.CountVectorsFeaturizer",
+        "constructor_name": "load",
+        "fn": "process_training_data",
+        "config": {},
+        "eager": false,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      },
+      "train_CountVectorsFeaturizer5": {
+        "needs": {
+          "training_data": "run_CountVectorsFeaturizer4"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.count_vectors_featurizer.CountVectorsFeaturizer",
+        "constructor_name": "create",
+        "fn": "train",
+        "config": {
+          "analyzer": "char_wb",
+          "min_ngram": 1,
+          "max_ngram": 4
+        },
+        "eager": false,
+        "is_target": true,
+        "is_input": false,
+        "resource": null
+      },
+      "run_CountVectorsFeaturizer5": {
+        "needs": {
+          "training_data": "run_CountVectorsFeaturizer4",
+          "resource": "train_CountVectorsFeaturizer5"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.count_vectors_featurizer.CountVectorsFeaturizer",
+        "constructor_name": "load",
+        "fn": "process_training_data",
+        "config": {
+          "analyzer": "char_wb",
+          "min_ngram": 1,
+          "max_ngram": 4
+        },
+        "eager": false,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      },
+      "train_DIETClassifier6": {
+        "needs": {
+          "training_data": "run_CountVectorsFeaturizer5"
+        },
+        "uses": "rasa.nlu.classifiers.diet_classifier.DIETClassifier",
+        "constructor_name": "create",
+        "fn": "train",
+        "config": {
+          "epochs": 100,
+          "model_confidence": "softmax",
+          "constrain_similarities": true
+        },
+        "eager": false,
+        "is_target": true,
+        "is_input": false,
+        "resource": null
+      },
+      "domain_provider": {
+        "needs": {
+          "importer": "finetuning_validator"
+        },
+        "uses": "rasa.graph_components.providers.domain_provider.DomainProvider",
+        "constructor_name": "create",
+        "fn": "provide_train",
+        "config": {},
+        "eager": false,
+        "is_target": true,
+        "is_input": true,
+        "resource": null
+      },
+      "domain_for_core_training_provider": {
+        "needs": {
+          "domain": "domain_provider"
+        },
+        "uses": "rasa.graph_components.providers.domain_for_core_training_provider.DomainForCoreTrainingProvider",
+        "constructor_name": "create",
+        "fn": "provide",
+        "config": {},
+        "eager": false,
+        "is_target": false,
+        "is_input": true,
+        "resource": null
+      },
+      "forms_provider": {
+        "needs": {
+          "domain": "domain_provider"
+        },
+        "uses": "rasa.graph_components.providers.forms_provider.FormsProvider",
+        "constructor_name": "create",
+        "fn": "provide",
+        "config": {},
+        "eager": false,
+        "is_target": false,
+        "is_input": true,
+        "resource": null
+      },
+      "responses_provider": {
+        "needs": {
+          "domain": "domain_provider"
+        },
+        "uses": "rasa.graph_components.providers.responses_provider.ResponsesProvider",
+        "constructor_name": "create",
+        "fn": "provide",
+        "config": {},
+        "eager": false,
+        "is_target": false,
+        "is_input": true,
+        "resource": null
+      },
+      "story_graph_provider": {
+        "needs": {
+          "importer": "finetuning_validator"
+        },
+        "uses": "rasa.graph_components.providers.story_graph_provider.StoryGraphProvider",
+        "constructor_name": "create",
+        "fn": "provide",
+        "config": {
+          "exclusion_percentage": null
+        },
+        "eager": false,
+        "is_target": false,
+        "is_input": true,
+        "resource": null
+      },
+      "training_tracker_provider": {
+        "needs": {
+          "story_graph": "story_graph_provider",
+          "domain": "domain_for_core_training_provider"
+        },
+        "uses": "rasa.graph_components.providers.training_tracker_provider.TrainingTrackerProvider",
+        "constructor_name": "create",
+        "fn": "provide",
+        "config": {
+          "debug_plots": false,
+          "augmentation_factor": 50
+        },
+        "eager": false,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      },
+      "train_MemoizationPolicy0": {
+        "needs": {
+          "domain": "domain_for_core_training_provider",
+          "training_trackers": "training_tracker_provider"
+        },
+        "uses": "rasa.core.policies.memoization.MemoizationPolicy",
+        "constructor_name": "create",
+        "fn": "train",
+        "config": {},
+        "eager": false,
+        "is_target": true,
+        "is_input": false,
+        "resource": null
+      },
+      "train_RulePolicy1": {
+        "needs": {
+          "domain": "domain_for_core_training_provider",
+          "training_trackers": "training_tracker_provider"
+        },
+        "uses": "rasa.core.policies.rule_policy.RulePolicy",
+        "constructor_name": "create",
+        "fn": "train",
+        "config": {},
+        "eager": false,
+        "is_target": true,
+        "is_input": false,
+        "resource": null
+      },
+      "train_UnexpecTEDIntentPolicy2": {
+        "needs": {
+          "domain": "domain_for_core_training_provider",
+          "training_trackers": "training_tracker_provider"
+        },
+        "uses": "rasa.core.policies.unexpected_intent_policy.UnexpecTEDIntentPolicy",
+        "constructor_name": "create",
+        "fn": "train",
+        "config": {
+          "max_history": 10,
+          "epochs": 100
+        },
+        "eager": false,
+        "is_target": true,
+        "is_input": false,
+        "resource": null
+      },
+      "train_TEDPolicy3": {
+        "needs": {
+          "domain": "domain_for_core_training_provider",
+          "training_trackers": "training_tracker_provider"
+        },
+        "uses": "rasa.core.policies.ted_policy.TEDPolicy",
+        "constructor_name": "create",
+        "fn": "train",
+        "config": {
+          "max_history": 10,
+          "epochs": 100,
+          "constrain_similarities": true
+        },
+        "eager": false,
+        "is_target": true,
+        "is_input": false,
+        "resource": null
+      }
+    }
+  },
+  "predict_schema": {
+    "nodes": {
+      "nlu_message_converter": {
+        "needs": {
+          "messages": "__message__"
+        },
+        "uses": "rasa.graph_components.converters.nlu_message_converter.NLUMessageConverter",
+        "constructor_name": "load",
+        "fn": "convert_user_message",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      },
+      "run_WhitespaceTokenizer0": {
+        "needs": {
+          "messages": "nlu_message_converter"
+        },
+        "uses": "rasa.nlu.tokenizers.whitespace_tokenizer.WhitespaceTokenizer",
+        "constructor_name": "load",
+        "fn": "process",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      },
+      "run_RegexFeaturizer1": {
+        "needs": {
+          "messages": "run_WhitespaceTokenizer0"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.regex_featurizer.RegexFeaturizer",
+        "constructor_name": "load",
+        "fn": "process",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_RegexFeaturizer1",
+          "output_fingerprint": "4e17e143cfca44d398175633ca9a4347"
+        }
+      },
+      "run_CRFEntityExtractor2": {
+        "needs": {
+          "messages": "run_RegexFeaturizer1"
+        },
+        "uses": "rasa.nlu.extractors.crf_entity_extractor.CRFEntityExtractor",
+        "constructor_name": "load",
+        "fn": "process",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_CRFEntityExtractor2",
+          "output_fingerprint": "b9525414ecc34dfaaeda6d445d9d7973"
+        }
+      },
+      "run_LexicalSyntacticFeaturizer3": {
+        "needs": {
+          "messages": "run_CRFEntityExtractor2"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.lexical_syntactic_featurizer.LexicalSyntacticFeaturizer",
+        "constructor_name": "load",
+        "fn": "process",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_LexicalSyntacticFeaturizer3",
+          "output_fingerprint": "f0053a69b9db4805ae1d840e5db97b4f"
+        }
+      },
+      "run_CountVectorsFeaturizer4": {
+        "needs": {
+          "messages": "run_LexicalSyntacticFeaturizer3"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.count_vectors_featurizer.CountVectorsFeaturizer",
+        "constructor_name": "load",
+        "fn": "process",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_CountVectorsFeaturizer4",
+          "output_fingerprint": "5aa244c33d7141cfb47f86f00a99bef4"
+        }
+      },
+      "run_CountVectorsFeaturizer5": {
+        "needs": {
+          "messages": "run_CountVectorsFeaturizer4"
+        },
+        "uses": "rasa.nlu.featurizers.sparse_featurizer.count_vectors_featurizer.CountVectorsFeaturizer",
+        "constructor_name": "load",
+        "fn": "process",
+        "config": {
+          "analyzer": "char_wb",
+          "min_ngram": 1,
+          "max_ngram": 4
+        },
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_CountVectorsFeaturizer5",
+          "output_fingerprint": "cf48ce39d92c472b9a21f6141112e156"
+        }
+      },
+      "run_DIETClassifier6": {
+        "needs": {
+          "messages": "run_CountVectorsFeaturizer5"
+        },
+        "uses": "rasa.nlu.classifiers.diet_classifier.DIETClassifier",
+        "constructor_name": "load",
+        "fn": "process",
+        "config": {
+          "epochs": 100,
+          "model_confidence": "softmax",
+          "constrain_similarities": true
+        },
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_DIETClassifier6",
+          "output_fingerprint": "db92b3de5ff540b9ac319233ac4127a8"
+        }
+      },
+      "run_FallbackClassifier7": {
+        "needs": {
+          "messages": "run_DIETClassifier6"
+        },
+        "uses": "rasa.nlu.classifiers.fallback_classifier.FallbackClassifier",
+        "constructor_name": "load",
+        "fn": "process",
+        "config": {
+          "threshold": 0.3,
+          "tables": [
+            "job_title.yml"
+          ]
+        },
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      },
+      "run_RegexMessageHandler": {
+        "needs": {
+          "messages": "run_FallbackClassifier7",
+          "domain": "domain_provider"
+        },
+        "uses": "rasa.nlu.classifiers.regex_message_handler.RegexMessageHandler",
+        "constructor_name": "load",
+        "fn": "process",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      },
+      "domain_provider": {
+        "needs": {},
+        "uses": "rasa.graph_components.providers.domain_provider.DomainProvider",
+        "constructor_name": "load",
+        "fn": "provide_inference",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "domain_provider",
+          "output_fingerprint": "dac15d5dc86a43c8bfbc3f196bcfce11"
+        }
+      },
+      "run_MemoizationPolicy0": {
+        "needs": {
+          "tracker": "__tracker__",
+          "domain": "domain_provider",
+          "rule_only_data": "rule_only_data_provider"
+        },
+        "uses": "rasa.core.policies.memoization.MemoizationPolicy",
+        "constructor_name": "load",
+        "fn": "predict_action_probabilities",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_MemoizationPolicy0",
+          "output_fingerprint": "52492f7d34464a708406a1fe33665fc1"
+        }
+      },
+      "run_RulePolicy1": {
+        "needs": {
+          "tracker": "__tracker__",
+          "domain": "domain_provider",
+          "rule_only_data": "rule_only_data_provider"
+        },
+        "uses": "rasa.core.policies.rule_policy.RulePolicy",
+        "constructor_name": "load",
+        "fn": "predict_action_probabilities",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_RulePolicy1",
+          "output_fingerprint": "707290e5e3f3434d925aa157118ad457"
+        }
+      },
+      "run_UnexpecTEDIntentPolicy2": {
+        "needs": {
+          "tracker": "__tracker__",
+          "domain": "domain_provider",
+          "rule_only_data": "rule_only_data_provider"
+        },
+        "uses": "rasa.core.policies.unexpected_intent_policy.UnexpecTEDIntentPolicy",
+        "constructor_name": "load",
+        "fn": "predict_action_probabilities",
+        "config": {
+          "max_history": 10,
+          "epochs": 100
+        },
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_UnexpecTEDIntentPolicy2",
+          "output_fingerprint": "912115a235984a0699e5a3d6ae69d894"
+        }
+      },
+      "run_TEDPolicy3": {
+        "needs": {
+          "tracker": "__tracker__",
+          "domain": "domain_provider",
+          "rule_only_data": "rule_only_data_provider"
+        },
+        "uses": "rasa.core.policies.ted_policy.TEDPolicy",
+        "constructor_name": "load",
+        "fn": "predict_action_probabilities",
+        "config": {
+          "max_history": 10,
+          "epochs": 100,
+          "constrain_similarities": true
+        },
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_TEDPolicy3",
+          "output_fingerprint": "24a5085b97a347139cb1a25cc40f5578"
+        }
+      },
+      "rule_only_data_provider": {
+        "needs": {},
+        "uses": "rasa.graph_components.providers.rule_only_provider.RuleOnlyDataProvider",
+        "constructor_name": "load",
+        "fn": "provide",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": {
+          "name": "train_RulePolicy1",
+          "output_fingerprint": "118390192dcf476693fcef312a4ae3bc"
+        }
+      },
+      "select_prediction": {
+        "needs": {
+          "policy0": "run_MemoizationPolicy0",
+          "policy1": "run_RulePolicy1",
+          "policy2": "run_UnexpecTEDIntentPolicy2",
+          "policy3": "run_TEDPolicy3",
+          "domain": "domain_provider",
+          "tracker": "__tracker__"
+        },
+        "uses": "rasa.core.policies.ensemble.DefaultPolicyPredictionEnsemble",
+        "constructor_name": "load",
+        "fn": "combine_predictions_from_kwargs",
+        "config": {},
+        "eager": true,
+        "is_target": false,
+        "is_input": false,
+        "resource": null
+      }
+    }
+  },
+  "training_type": 3,
+  "project_fingerprint": null,
+  "core_target": "select_prediction",
+  "nlu_target": "run_RegexMessageHandler",
+  "language": "en"
+}

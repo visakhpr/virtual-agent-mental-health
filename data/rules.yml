@@ -1,0 +1,17 @@
+version: "3.1"
+
+rules:
+  - rule: welcome user login and signup
+    conversation_start: true  # this rule only applies at the beginning of a conversation
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_login_signup
+
+  - rule: login path
+    steps:
+    - intent: login
+    - action: utter_login
+
+
+

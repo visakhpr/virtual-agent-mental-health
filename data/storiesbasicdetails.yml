@@ -1,0 +1,150 @@
+version: "3.1"
+
+stories:
+
+# signup with mail and mobile number
+- story: signup with mail
+  steps:    
+  - intent: signup
+  - action: utter_ask_email_buttons
+  - intent: yes_email
+  - action: utter_ask_email_address
+  - intent: contact
+    entities:
+    - email_address: "meena@gmail.com"
+  - slot_was_set:
+    - email_address: "meena@gmail.com"
+
+  - action: utter_ask_otp_email
+  - intent: otp
+  - action: utter_otp_validation
+
+  - action: utter_ask_mobile_number
+  - intent: contact
+    entities:
+    - mobile_number: 1234567890
+  - slot_was_set:
+    - mobile_number: 1234567890
+
+  - action: utter_ask_otp_mobile_number
+  - intent: otp
+  - action: utter_otp_validation
+  - action: utter_ask_name
+  - intent: provide_name
+    entities:
+    - name: "Meena"
+  - slot_was_set:
+    - name: "Meena"
+
+  - action: utter_ask_age
+  - intent: provide_age
+    entities:
+    - age: 27
+  - slot_was_set:
+    - age: 27
+
+  - action: utter_ask_gender
+  - intent: select_gender
+    entities:
+    - gender: "Female"
+  - slot_was_set:
+    - gender: "Female"
+
+  - action: utter_ask_marital_status
+  - intent: select_marital_status
+    entities:
+    - marital_status: "Unmarried"
+  - slot_was_set:
+    - marital_status: "Unmarried"
+
+  - action: utter_ask_education
+  - intent: select_education
+    entities:
+    - education: "Bachelors"
+  - slot_was_set:
+    - education: "Bachelors"
+
+  - action: utter_ask_occupation
+  - intent: give_job_title
+    entities:
+    - job_title: "research intern"
+  - slot_was_set:
+    - education: "research intern"
+
+  - action: utter_ask_district
+  - intent: contact
+    entities:
+    - district: "Trivandrum"
+  - slot_was_set:
+    - district: "Trivandrum"
+
+  - action: action_save_slot_values
+  - action: utter_medications_b
+
+# signup without mail but with mobile number
+- story: signup without mail but with mobile number
+  steps:
+  - intent: signup
+  - action: utter_ask_email_buttons
+  - intent: no_email
+  - action: utter_ask_mobile_number
+  - intent: contact
+    entities:
+    - mobile_number: 1234567890
+  - slot_was_set:
+    - mobile_number: 1234567890
+  - action: utter_ask_otp_mobile_number
+  - intent: otp
+  - action: utter_otp_validation
+  
+  - action: utter_ask_name
+  - intent: provide_name
+    entities:
+    - name: "Meena"
+  - slot_was_set:
+    - name: "Meena"
+  
+  - action: utter_ask_age
+  - intent: provide_age
+    entities:
+    - age: 27
+  - slot_was_set:
+    - age: 27
+
+  - action: utter_ask_gender
+  - intent: select_gender
+    entities:
+    - gender: "Female"
+  - slot_was_set:
+    - gender: "Female"
+
+  - action: utter_ask_education
+  - intent: select_education
+    entities:
+    - education: "Bachelors"
+  - slot_was_set:
+    - education: "Bachelors"
+
+  - action: utter_ask_occupation
+  - intent: give_job_title
+    entities:
+    - job_title: "research intern"
+  - slot_was_set:
+    - education: "research intern"
+
+  - action: utter_ask_marital_status
+  - intent: select_marital_status
+    entities:
+    - marital_status: "Unmarried"
+  - slot_was_set:
+    - marital_status: "Unmarried"
+
+  - action: utter_ask_district
+  - intent: contact
+    entities:
+    - district: "Trivandrum"
+  - slot_was_set:
+    - district: "Trivandrum"
+
+  - action: action_save_slot_values
+  - action: utter_medications_b

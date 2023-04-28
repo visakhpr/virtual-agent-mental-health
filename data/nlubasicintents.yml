@@ -1,0 +1,104 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: login
+  examples: |
+    - Login
+    - I want to login
+    - Please just log me in
+    - log me in
+
+- intent: signup
+  examples: |
+    - Signup
+    - I want to signup
+    - show me the sign up details
+    - sign me up
+
+# otp
+- regex: otp
+  examples: |
+    - \b\d{6}\b
+- intent: otp
+  examples: |
+    - 121212
+    - 111111
+    - 000000
+    - 123456
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah
+    - yup
+    - definitely
+    - sure
+    - oh yes
+
+- intent: deny
+  examples: |
+    - no
+    - no way
+    - not possible
+    - definitely not
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+## Ending the bot
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - See you later
+    - Take care
+    - Until next time
+    - So long
+    - Farewell
+    - Have a good day
+    - Have a great weekend
+    - Bye for now
+    - Catch you later
+    - It was nice talking to you
+    - I'll see you around
+    - Peace out
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye

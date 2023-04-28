@@ -1,0 +1,7 @@
+{
+    "Question": "Have you been prescribed any medications by your healthcare provider recently?",
+    "Answer": "/deny"
+}{
+    "Question": "Can you please tell me if you've ever talked to a psychologist or counselor about your mental health?",
+    "Answer": "/affirm"
+}

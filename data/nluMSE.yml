@@ -1,0 +1,569 @@
+version: "3.1"
+
+nlu:
+
+
+- intent: medications_details
+  examples: |
+    - Cardiovascular diseases 
+    - diabetes 
+    - chronic kidney disease 
+    - cancer 
+    - alzheimer's disease 
+    - dementia
+    - arthritis 
+    - osteoporosis 
+    - ulcer
+    - depression
+    - blood pressure
+    - heart disease
+    - lung disease
+    - asthma
+    - chronic liver disease 
+    - multiple sclerosis 
+    - parkinson's disease
+    - epilepsy
+    - sickle cell anemia
+    - chronic pain conditions 
+    - autoimmune diseases 
+    - chronic migraines
+    - HIV/AIDS
+    - thyroid
+    - menstrual problems
+    - menstruation problems
+
+- intent: psychologist_consultation
+  examples: |
+    - Yes, I have visited a psychologist before
+    - No, I have not visited a psychologist before
+
+## Mood (Inquired)
+
+# happy mood
+- intent: happy
+  examples: |
+    - happy
+    - very happy
+- intent: happy_thought
+  examples: |
+    - feeling really happy and grateful today
+    - had a great day today and I can't stop smiling
+    - got some good news and I'm over the moon
+    - had a wonderful conversation with a friend today
+    - feeling so fortunate for the people in my life
+    - feeling proud of myself for accomplishing something today
+    - excited about a future event or trip
+    - I'm feeling content and at peace with myself
+    - received a thoughtful gift or gesture that made my day
+    - accomplished a goal that I've been working towards
+    - looking forward to spending time with loved ones
+    - feel like everything is falling into place and it's making me happy
+    - I am feeling optimistic and hopeful for the future
+# sad mood
+- intent: sad
+  examples: |
+    - sad
+    - very sad
+- intent: sad_thought
+  examples: |
+    - I find myself dwelling on past mistakes and missed opportunities
+    - think about all the things that could go wrong in the future
+    - tend to have negative thoughts about myself, like feeling worthless or inadequate.
+    - my mind tends to wander to memories of past traumas or difficult experiences
+    - sometimes find myself thinking about loved ones who are no longer with me when I'm feeling sad
+    - often feel overwhelmed and it's hard for me to focus on any particular thought or feeling
+    - just feel numb when I'm sad and don't really think about anything in particular
+    - I often think about how unfair life can be and why bad things happen to good people
+    - tend to worry a lot about the future, like whether I'll be able to achieve my goals or find happiness
+    - Sometimes when I'm sad, I find myself replaying negative or hurtful interactions with others in my mind
+# angry mood
+- intent: angry
+  examples: |
+    - angry
+    - very angry
+- intent: angry_thought
+  examples: |
+    - thinking deeply on the injustice of the situation and how unfair it is
+    - feeling like my blood pressure is on rise
+    - mind is jumping to worst-case scenarios and I start catastrophizing
+    - think about all the ways I've been wronged in the past, and it just fuels my anger even more
+    - often have a running internal monologue of all the things I wish I could say or do 
+    - thinking about all the ways I've been let down or betrayed by others
+    - sometimes feel like I'm completely out of control and my thoughts have become jumbled 
+    - my mind often fixates on the person or thing that's causing my anger
+    - find it hard to think about anything else
+    - tend to become hyper-focused on the details of the situation which makes it difficult to see the bigger picture
+    - sometimes feel like I'm on a rollercoaster of emotions, and my thoughts reflect that intensity
+    - thoughts become very critical of others and myself , and it is hard to escape that negativity
+    - feel a lot of physical sensations in addition to my thoughts 
+    - feel like my heart is racing and my muscles tensing up
+    - thoughts become repetitive and circular when I'm really mad, and it is hard to break out of that cycle
+    - thoughts become very self-critical and blame myself for the situation
+    - feel like I am not good in handling pressure
+    - mind jumps to all the ways I wish I could get revenge or make the other person feel the way I do
+    - mind make hypothetical scenarios  like what would happen if I said or did a certain thing
+    - thoughts can become very black-and-white and rigid, and it can be hard to see things from other perspectives
+    - feel like I've lost control and that I'm at the mercy of my emotions and thoughts 
+    - thoughts become very intense and overwhelming, like a storm that I can't escape
+    - thoughts become very focused on the future  
+    - think on how this situation will impact me in the long term 
+# anxious mood
+- intent: anxiety
+  examples: |
+    - anxious
+    - very anxious
+- intent: anxiety_thought
+  examples: |
+    - can't stop worrying about everything
+    - feel like something terrible is going to happen
+    - keep imagining worst-case scenarios
+    - My heart is racing and I can't calm down
+    - I'm afraid of something, but I don't know what it is
+    - feel like I'm going to lose control
+    - can't shake this feeling of dread
+    - keep replaying past mistakes in my head and it's making me anxious
+    - feeling overwhelmed and stressed out
+    - mind won't stop racing and it's making me anxious
+    - I'm scared and I don't know how to stop it
+    - feel like I'm trapped in my own thoughts
+    - constantly worried about what others think of me
+    - feel like I'm not good enough and it's causing me anxiety
+    - having trouble sleeping because of my anxious thoughts
+    - feel like I'm drowning in my own fears and worries
+# stressed mood
+- intent: stress
+  examples: |
+    - stress
+    - very stress
+- intent: stress_thought
+  examples: |
+    - can't seem to escape my stress and it's overwhelming
+    - feel like I'm drowning in all of my responsibilities
+    - constantly worrying about what I need to do next
+    - feel like everything is out of my control and it's causing me stress
+    - struggling to balance everything in my life right now
+    - can't seem to catch a break and it's causing me to feel stressed
+    - feeling anxious and on edge about everything going on in my life
+    - feel like I'm not doing enough and it's causing me to feel stressed
+    - having trouble sleeping because of my stress
+    - feeling irritable and snappy because of my stress levels
+    - finding it hard to focus on anything because of my stress
+    - feeling exhausted and burnt out because of my stress
+    - struggling to find ways to cope with my stress
+    - feeling like my stress is taking over my life
+# bored mood
+- intent: bore
+  examples: |
+    - bore
+    - very bored
+- intent: bore_thought
+  examples: |
+    - feeling so bored and uninterested
+    - Nothing seems to hold my attention right now
+    - so tired of doing the same things every day
+    - wish I had something fun or exciting to do
+    - can't find anything that sounds interesting or enjoyable
+    - stuck in a rut and everything feels boring
+    - wish I could be doing something more productive or engaging
+    - feeling uninspired and unenthusiastic
+    - bored with my current routine and need a change
+    - wish I had more options for things to do or places to go
+    - feeling disconnected and disinterested in my surroundings
+    - struggling to find motivation to do anything right now
+# confused mood
+- intent: confused
+  examples: |
+    - confused
+    - very confused
+- intent: confused_thought
+  examples: |
+    - I don't know what to do or where to start
+    - lost and unsure of myself
+    - confused about what's going on and what's expected of me
+    - can't seem to make a decision about something
+    - feel like I'm going in circles and not making any progress
+    - not sure what I want or what will make me happy
+    - feeling conflicted about something and it's causing me confusion
+    - struggling to understand something that's happening
+    - feeling overwhelmed and unsure about how to move forward
+    - second-guessing myself and my decisions
+    - feeling like I'm in a fog and can't see clearly
+    - finding it hard to focus because of my confusion
+    - feeling like I'm in a situation that's beyond my understanding
+    - feeling like I'm out of my depth and don't know what to do
+# normal mood
+- intent: normal
+  examples: |
+    - normal
+    - very normal
+- intent: normal_thought
+  examples: |
+    - feeling pretty good today
+    - nothing out of the ordinary is happening right now
+    - just going about my day as usual
+    - feeling content with my life at the moment
+    - not feeling particularly happy or sad, just normal
+    - not experiencing any strong emotions right now
+    - feeling calm and relaxed
+    - everything is running smoothly in my life right now
+    - feeling grateful for the little things in my life
+    - I'm just taking things one step at a time
+    - feeling content with where I am in my life right now
+    - nothing is particularly exciting or stressful at the moment
+    - feeling like everything is just as it should be
+    - just enjoying the present moment without any worries or concerns
+- intent: images_or_thoughts
+  examples: |
+    - Sometimes, there are memories or images that just keep replaying in my mind, no matter how hard I try to push them away
+    - Yes, there are certain thoughts that I find myself fixating on, and it can be really hard to shake them
+    - I think everyone has some thoughts or memories that they struggle to let go of, and I'm no exception
+    - Unfortunately, there are some things that I just can't seem to forget, no matter how much I want to
+    - Absolutely. There are certain situations or events that keep playing over and over in my mind, and it can be really distressing
+    - Yes, and it's frustrating because I know I need to move on, but my mind just keeps going back to those same thoughts
+    - I think it's pretty normal to have certain things that you can't get out of your head, but it can definitely be a source of stress and anxiety
+    - Sometimes, I feel like my mind is stuck in a loop, and no matter what I do, I can't break out of it
+- intent: scared
+  examples: |
+    - Yes, I am feeling pretty anxious lately
+    - There are a lot of things going on that have me feeling uneasy
+    - I wouldn't say that I'm scared, exactly, but there are definitely some things that are weighing on my mind
+    - To be honest, I am pretty frightened about some things. It's hard to shake that feeling of unease
+    - No, I'm not really worried about anything right now
+    - I'm not scared, but I am a little bit concerned about a few things that are coming up in the near future
+    - I'm feeling pretty worried about a few things
+    - Honestly, I'm feeling a little bit of both fear and anxiety right now
+    - I'm not really scared, but there are definitely some things that I'm feeling pretty uneasy about
+    - get scared thinking about my future
+    - thought about my future makes me feel uneasy
+- intent: delusions
+  examples: |
+    - Yes, there are definitely some beliefs that I hold that not everyone agrees with
+    - I wouldn't say that my beliefs are necessarily unique, but they might not be shared by everyone
+    - There are some pretty important beliefs that I hold that not everyone shares 
+    - No, I think that most of my beliefs are pretty widely shared
+    - I definitely hold some beliefs that are not shared by others 
+    - I think everyone has their own unique set of beliefs, and I'm no exception.
+    - There are definitely some things that I believe that not everyone shares, but that's just part of life
+- intent: different
+  examples: |
+    - Yes, there are definitely times when I feel like I don't quite fit in with the people around me
+    - I think everyone feels detached or different from others at some point in their lives 
+    - There are definitely times when I feel like I've changed a lot compared to the people around me 
+    - I don't think I'm really that different from the people around me
+    - I think feeling detached or removed from others can be a really tough experience
+    - I definitely feel like I've changed a lot over the years
+    - I think everyone has moments when they feel detached or removed from the people around them
+    - There have been times in my life when I've felt like I don't really fit in with the people around me
+    - I think feeling different from others can be a real strength, even if it's tough at times 
+    - I've definitely changed a lot over the years, but I think that's just part of life 
+    - Feeling detached or removed from others can be really hard 
+    - I think it's natural to feel detached or removed from others at times, especially when you're going through a tough time
+- intent: unnatural
+  examples: |
+    - Yes, everything seems like a dream or a movie lately
+    - No, things seem pretty normal to me
+    - Sometimes, especially when I'm feeling stressed or anxious
+    - I don't know, it's hard to explain
+    - Yes, it's like I'm watching myself from a distance
+    - No, but I have been having trouble sleeping lately
+    - Definitely, things just don't feel real to me anymore
+    - I'm not sure what's real and what's not sometimes
+    - No, but I have been feeling a sense of dread or foreboding lately
+    - It's hard to put into words, but things just feel off or out of place to me
+- intent: harm_you
+  examples: |
+    - Yes, I do. Have been receiving threatening messages from someone and I'm worried for my safety
+    - No, I don't think so
+    - haven't had any reason to believe that anyone wants to harm me
+    - not sure. feeling like someone might be watching me
+    - think a specific person might have something against me, but I don't think there's a larger group involved
+    - had some negative interactions with a group of people online, and I'm concerned that they might try to harm me in some way
+    - Yes, I've been in a situation where someone has physically harmed me before, and I'm worried it might happen again
+    - No, I don't believe anyone intends to harm me
+    - I have a stalker and I'm scared they might try to hurt me
+    - don't think anyone specifically wants to harm me
+    - work in a competitive industry, and feel like there might be people who are trying to sabotage my career
+    - have never felt that people are trying to harm me, but have felt many times that peoople are trying to steal my thoughts
+    - Yes, I've been experiencing that and it's been really frightening 
+    - feel like I'm losing control of my own mind
+    - No, I don't think anyone is stealing or inserting thoughts into my head
+    - not sure. Sometimes I feel like my thoughts are being influenced by others
+    - I feel like someone is reading my mind, but I don't think they're actually stealing my thoughts
+    - I have intrusive thoughts, which feels like someone is inserting thoughts into my head
+    - feel like someone is trying to control my thoughts and manipulate my actions
+    - No, I don't think people are stealing my thoughts
+    - feel like people were stealing my thoughts, but then I realized that it was just my own paranoia and anxiety
+    - have always felt that even though people don't try to hurt me physically, they try to hamper my thoughts
+- intent: hallucinations
+  examples: |
+    - keep hallucinating things
+    - hear some voices in my head
+    - feel like somebody is singing a song sitting in my head
+    - hear the cry of a baby
+    - feel that somebody is following me all the time
+    - feel like lights are flashing in front of me
+    - hear the door banging sometimes
+    - hear loud footsteps
+    - hear loud knocking on doors even when no one did it
+    - get the smell of roses 
+    - smell of some flowers around me
+    - get a foul smell sometimes
+    - feel like some insects are crawling on my skin
+    - Yes,  had a few experiences where I thought I heard someone calling my name but nobody did it
+    - felt like someone was tapping me on the shoulder, but when I looked around, no one was there.
+    - No, I haven't had any experiences like that
+    - Sometimes I smell things that aren't really there
+    - smell the scent of my grandmother's perfume, even though she passed away years ago
+    - saw something out of the corner of my eye, but when I looked directly at it, nothing was there
+    - felt like the room was spinning or like I was floating above my body
+    - experienced hallucinations in the past, particularly when I was under a lot of stress
+    - felt like I was being watched, but there was no one around
+    - had a few instances where I smelled something burning, but there was nothing on fire. It was weird.
+    - once saw a shadow figure out of the corner of my eye, but when I turned to look, there was nothing there
+    - Yes, It's a scary feeling to see things that aren't actually there
+    - felt like bugs were crawling all over me, but when I looked, there was nothing there
+    - had a few experiences where I tasted something metallic in my mouth, even though I hadn't eaten anything like that
+- intent: illusions
+  examples: |
+    - Yes, I have definitely misinterpreted muffled noises before
+    - Sometimes, i have heard footsteps or voices when they're really just random sound
+    - No, I don't think I've ever misinterpreted muffled noises or shadows before
+    - Yes, occasionally I mistake shadows for something else, especially when I'm feeling anxious or on edge
+    - I'm not sure, I haven't really thought about it before   
+    - Yes, I have misinterpreted muffled noises in the past, but I think it was because I was tired or distracted
+    - No, I don't think I've ever had that experience before
+    - Sometimes yes, if I'm in a dark or unfamiliar environment
+    - misinterpreted shadows or noises as something more threatening than they actually are
+    - had a few experiences where I thought I heard something  but it turned out to be a harmless sound
+    - saw movement out of the corner of my eye, but it turned out to be a trick of the light
+- intent: problems
+  examples: |
+    - bullied
+    - harassed and humiliated
+    - disrespected
+    - getting divorced
+    - feel like a loser due to my divorce
+    - Life became so pointless after my divorce
+    - Mere thought of my divorce is making me really sad
+    - financial crisis
+    - too much of financial problems 
+    - Financial burden
+    - deep down in debt
+    - can't share my financial problems 
+    - feel unmotivated 
+    - don't feel like doing anything 
+    - lost complete interest in many things
+    - things don't excite me like before
+    - feel completely indifferent 
+    - life is unexciting these days
+    - unambitious
+    - lack creativity
+    - uninspiring life
+    - dull life
+    - boring life
+    - work stress
+    - Completely burned out due to work
+    - new project is giving me a lot of stress
+    - won't finish my work in time
+    - struggle to cope with the building work pressure
+    - find my colleagues constantly making fun of me
+    - not motivated to work
+    - my work is boring
+    - won't complete my project in time
+    - project is very difficult
+    - lost one of my close relative due to COVID
+    - lost my best friend due to an accident
+    - worried about the death of my near and dear ones
+    - dream about death
+    - lost my parents recently
+    - the death of many people around me make sad
+    - broke up with my partner
+    - I initialized the breakup with my partner, but now I feel sad thinking about it
+    - My partner cheated me
+    - feel like I could have avoided my breakup
+    - breakups are painful
+    - my partner is cheating on me
+    - my partner treats with so much disrespect which becomes unbearable at times
+    - my partner is not trusting me
+    - fight with others for trivial reasons
+    - feel lonely in life
+    - feel like i do not have people to support me
+    - a lonesome life
+    - people never understand my feelings
+    - always misunderstood by others
+    - avoided by people
+    - people judge me always
+    - not able to concentrate on my work
+    - losing interest in my work
+    - unfocussed in life
+    - not able to focus
+    - losing focus
+    - demotivated
+    - depressed
+    - really sad these days
+    - unhappy with life
+    - there is constant fighting in my family
+    - feel like a stranger within my family itself
+    - lack of communication in the family
+    - feel totally alone
+    - not able to sleep
+    - lots of negative thoughts happens when I am going to sleep
+    - disrupted sleep
+    - some things bother me at night 
+    - insomnia
+    - feel like I miss someone 
+    - feel abslotely hopeless
+    - my mind aimlessly wander around sometimes
+    - people ignore me
+    - feel like a loser in life
+    - life is so boring
+    - relationship issues
+    - stress or anxiety
+    - depressed
+    - lack of support and guidance in life
+    - past trauma
+    - unmotivated
+    - post traumatic stress
+    - completely lost
+    - confused
+    - stressed
+    - anxious
+  
+
+- intent: problems_cause
+  examples: |
+    - I'm not really sure what's causing my problems. 
+    - I have been trying to figure out the problems cause myself, but I just can't seem to pinpoint it
+    - my problems might be related to stress or anxiety
+    - I've been going through a lot lately and it has been taking a toll on me
+    - I believe my problems come from a lack of motivation and direction in my life
+    - don't really know what to do or where to go, and it's been causing me a lot of stress and unhappiness
+    - think my problems might be related to a physical health issue
+    - experiencing some symptoms that have been affecting my daily life and making it hard for me to function normally
+    - Honestly, I'm not sure what's causing my problems
+    - I exactly don't know what is the cause of my problem which is why I am talking to you, ao that I can gain some insight and figure it out together
+    - my problems might be related to my job
+    - feeling really burnt out and overwhelmed with my workload and it's affecting my mental health
+    - believe my problems are stemming from a past trauma that I haven't fully dealt with. 
+    - think my problems are caused by a lack of communication and understanding in my relationship
+    - having some conflicts with people in my life and it's been really affecting me
+    - it might be related to my lifestyle habits
+    - I haven't been taking care of myself physically and mentally, and it's starting to catch up with me
+    - I am not entirely sure what's causing my problems
+    - feel like my problems are caused by an underlying mental health issue such as anxiety or depression
+    - think my problems are caused by a lack of support or guidance in my life
+    - feel like I'm navigating everything on my own and it's been really overwhelming
+    - my problems are related to a financial struggle 
+    - I've been having trouble making ends meet and it's been causing a lot of stress and anxiety
+    - think my problems might be related to a negative self-image
+    - struggling with my self-esteem and it's been affecting my relationships and my overall wellbeing
+    - think my problems might be related to a recent change or transition in my life
+    - I'm not entirely sure what's causing my problems, but I do know that I've been feeling really stuck and unmotivated lately
+    - not sure
+    - related to stress at work
+    - number of things, like my diet, lack of sleep, or some underlying medical condition
+    - I've been feeling anxious and down lately and it's been affecting my daily life
+    - related to some unresolved issues from my past that are resurfacing
+    - I think it's a combination of different factors, and I'm having trouble identifying the main cause
+    - I haven't really thought about it, I just know that I'm not feeling like myself and I need some guidance
+    - I'm not comfortable sharing that at the moment
+    - might be related to my recent breakup
+    - feeling it's related to my job_title. It's been really stressful lately and I feel overwhelmed
+    - my relationship with my family
+    - lack of motivation and energy
+    - might be related to my sleep patterns
+    - having trouble sleeping and feel tired all the time
+    - related to my financial situation
+    - struggling to make ends meet and it's been causing a lot of stress
+    - feeling anxious and depressed
+    - my lifestyle habits
+    - not eating well or exercising regularly
+- intent: help_problems
+  examples: |
+    - I'm not sure, do you have any recommendations?
+    - plan to talk to my doctor about it and get their advice
+    - think I'll read some articles online and see if I can find any helpful resources
+    - planning on reaching out to a support group to see if they can offer any advice or assistance
+    - already made an appointment with a therapist to start working through this issue
+    - going to discuss it with my family and friends to get their input and support
+    - considering trying some self-help techniques and seeing if they make a difference
+    - haven't thought about it yet, do you have any suggestions for where I can start
+    - I'm going to try and work through it on my own for now, but if it gets worse I'll seek professional help
+    - planning on reaching out to a helpline or hotline to get some guidance
+    - I'm not sure yet. I'm hoping you can guide me in the right direction
+    - plan to talk to my doctor about it and see if they can refer me to a specialist
+    - thinking of reaching out to a therapist or counselor to help me work through these issues
+    - considering joining a support group or attending group therapy sessions
+    - open to any suggestions you might have 
+    - I just know that I need some help
+    - I'm not sure if I'm ready to get help yet
+    - plan to talk to my friends and family about it and see if they can recommend anyone
+    - going to try some self-help techniques like meditation and exercise before seeking professional help
+    - not sure if I need professional help yet and hoping to get some advice from you first
+    - considering trying online therapy or counseling to make it more convenient for me
+    - planning to attend some workshops or seminars to learn more about my problem and how to cope with it
+## Judgemental Questions Response Intents (right response, ignoring, destroy, open letter, leave, wait)
+# right response
+- intent: right_response
+  examples: |
+    - post the envelope at the nearest letter box
+    - stay calm, use the fire alarm to alert other people and inform the authorities
+# ignoring
+- intent: ignoring
+  examples: |
+    - ignore the envelope
+    - ignore the smoke
+# destroy
+- intent: destroy
+  examples: |
+    - destroy the envelope and then walk away
+    - destroy it and move away
+# open letter
+- intent: open_letter
+  examples: |
+    - send the letter to the sender itself after opening the letter
+    - open the letter and post it to the sender itself
+# leave
+- intent: leave
+  examples: |
+    - leave the movie theater 
+    - leave the place immediately
+    
+# wait
+- intent: wait
+  examples: |
+    - wait for someone else to respond to the smoke
+    - wait for others to respond
+- intent: suicidal
+  examples: |
+    - Yes, I have felt that way before
+    - have had fleeting thoughts about it, but I don't think I would ever act on them
+    - don't feel that way all the time, but there are definitely times when I do
+    - feel that way sometimes, but I don't think it's a serious problem
+    - have felt that way in the past, but I'm working on finding ways to cope with those feelings
+    - feel that way occasionally, but I'm not sure if it's normal or if I should be concerned
+    - used to feel that way a lot
+    - felt that way when things get really overwhelming or when I'm going through a tough time
+    - don't feel that way currently, but I have in the past and it's been a struggle to deal with
+    - feel like life has lost its meaning and purpose, but I'm trying to find ways to reignite that spark
+    - feel that way when I'm feeling isolated and alone, but I'm trying to reach out to people more to combat those feelings
+# examples of homicidal
+- intent: homicidal
+  examples: |
+    - Occasionally, I may had thoughts of anger towards people who have wronged me
+    - Yes, I have thought about hurting others or seeking revenge in the past
+    - I seek support and help when I am struggling with these feelings
+- intent: affirm_Cage
+  examples: |
+    - Yes, I have felt that I should cut down my drinking
+    - Yes, I get annoyed when people criticize on my drinking
+    - Yes, I feel bad about my drinking
+    - Yes, I will have a drink as first thing in the morning to steady my nerves or get rid of my haangover
+
+- intent: deny_Cage
+  examples: |
+    - No, I have not felt that I should cut down my drinking
+    - No, I don't get annoyed when people criticize on my drinking
+    - No, I don't feel bad about my drinking
+    - No, I will never have a drink as first thing in the morning
+    

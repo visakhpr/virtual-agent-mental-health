@@ -1,0 +1,22 @@
+[
+  {
+    "name": "age",
+    "pattern": "^(1[0-9]{1,2}|[1-9][0-9]|[1-9])$"
+  },
+  {
+    "name": "email_address",
+    "pattern": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+  },
+  {
+    "name": "mobile_number",
+    "pattern": "\\b\\d{10}\\b"
+  },
+  {
+    "name": "otp",
+    "pattern": "\\b\\d{6}\\b"
+  },
+  {
+    "name": "job_title",
+    "pattern": "(\\bactor\\b|\\bactress\\b|\\baerospace\\ engineer\\b|\\bagriculturist\\b|\\bair\\ hostess\\b|\\barchitect\\b|\\bartist\\b|\\battorney\\b|\\bauthor\\b|\\bbaker\\b|\\bbanker\\b|\\bbarber\\b|\\bbartender\\b|\\bbeautician\\b|\\bbiologist\\b|\\bbookkeeper\\b|\\bbusiness\\b|\\bbusinessman\\b|\\bbusiness\\ analyst\\b|\\bcarpenter\\b|\\bchef\\b|\\bchemist\\b|\\bchiropractor\\b|\\bcivil\\ engineer\\b|\\bclergy\\b|\\bclinical\\ psychologist\\b|\\bcoach\\b|\\bcomputer\\ programmer\\b|\\bconstruction\\ worker\\b|\\bconsultant\\b|\\bcorporate\\ trainer\\b|\\bcosmetologist\\b|\\bcounselor\\b|\\bcustomer\\ service\\ representative\\b|\\bdancer\\b|\\bdata\\ analyst\\b|\\bdata\\ scientist\\b|\\bdentist\\b|\\bdermatologist\\b|\\bdesigner\\b|\\bdetective\\b|\\bdietician\\b|\\bdoctor\\b|\\beconomist\\b|\\beditor\\b|\\belectrician\\b|\\bengineer\\b|\\bentrepreneur\\b|\\bevent\\ planner\\b|\\bexecutive\\ assistant\\b|\\bfashion\\ designer\\b|\\bfarmer\\b|\\bfilm\\ director\\b|\\bfinancial\\ analyst\\b|\\bfirefighter\\b|\\bfitness\\ trainer\\b|\\bflight\\ attendant\\b|\\bflorist\\b|\\bfood\\ service\\ manager\\b|\\bforensic\\ scientist\\b|\\bgame\\ designer\\b|\\bgeologist\\b|\\bgraphic\\ designer\\b|\\bhairdresser\\b|\\bhealthcare\\ administrator\\b|\\bhistorian\\b|\\bhomemaker\\b|\\bhotel\\ manager\\b|\\bhousekeeper\\b|\\bhousewife\\b|\\bhuman\\ resources\\ specialist\\b|\\bindustrial\\ designer\\b|\\binformation\\ security\\ analyst\\b|\\binsurance\\ agent\\b|\\binterior\\ designer\\b|\\binvestment\\ banker\\b|\\bjournalist\\b|\\bjudge\\b|\\blaboratory\\ technician\\b|\\blandscape\\ architect\\b|\\blawyer\\b|\\blecturer\\b|\\blibrarian\\b|\\blife\\ coach\\b|\\bliterary\\ agent\\b|\\bloan\\ officer\\b|\\blogistics\\ coordinator\\b|\\bmanagement\\ consultant\\b|\\bmarketing\\ specialist\\b|\\bmassage\\ therapist\\b|\\bmechanical\\ engineer\\b|\\bmedical\\ assistant\\b|\\bmedical\\ laboratory\\ technician\\b|\\bmedical\\ records\\ technician\\b|\\bmedical\\ technologist\\b|\\bmerchant\\ navy\\b|\\bmeteorologist\\b|\\bmicrobiologist\\b|\\bmilitary\\ officer\\b|\\bmusician\\b|\\bnot\\ working\\b|\\bnurse\\b|\\boptometrist\\b|\\borthodontist\\b|\\bparalegal\\b|\\bparamedic\\b|\\bpatent\\ attorney\\b|\\bpersonal\\ trainer\\b|\\bpharmacist\\b|\\bphotographer\\b|\\bphysical\\ therapist\\b|\\bphysician\\ assistant\\b|\\bpilot\\b|\\bplumber\\b|\\bpolice\\ officer\\b|\\bpolitician\\b|\\bproduct\\ manager\\b|\\bprofessor\\b|\\bproject\\ manager\\b|\\bpsychiatrist\\b|\\bpsychologist\\b|\\bpublic\\ relations\\ specialist\\b|\\breal\\ estate\\ agent\\b|\\breceptionist\\b|\\bresearch\\ intern\\b|\\bresearch\\ scientist\\b|\\brestaurant\\ manager\\b|\\bsales\\ representative\\b|\\bschool\\ administrator\\b|\\bscientist\\b|\\bsocial\\ media\\ manager\\b|\\bsocial\\ worker\\b|\\bsoftware\\ developer\\b|\\bspeech\\ therapist\\b|\\bsports\\ coach\\b|\\bstockbroker\\b|\\bstudent\\b|\\bsurgeon\\b|\\bsystem\\ administrator\\b|\\btax\\ accountant\\b|\\bteacher\\b|\\btechnical\\ writer\\b|\\btechnician\\b|\\btravel\\ agent\\b|\\btruck\\ driver\\b|\\bveterinarian\\b|\\bvideo\\ game\\ developer\\b|\\bwaiter\\b|\\bwaitress\\b|\\bweb\\ developer\\b|\\bwriter\\b)"
+  }
+]

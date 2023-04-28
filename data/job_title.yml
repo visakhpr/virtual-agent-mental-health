@@ -1,0 +1,158 @@
+version: "3.1"
+
+nlu:
+
+- lookup: job_title
+  examples: |
+    - actor
+    - actress
+    - aerospace engineer
+    - agriculturist
+    - air hostess
+    - architect
+    - artist
+    - attorney
+    - author
+    - baker
+    - banker
+    - barber
+    - bartender
+    - beautician
+    - biologist
+    - bookkeeper
+    - business
+    - businessman
+    - business analyst
+    - carpenter
+    - chef
+    - chemist
+    - chiropractor
+    - civil engineer
+    - clergy
+    - clinical psychologist
+    - coach
+    - computer programmer
+    - construction worker
+    - consultant
+    - corporate trainer
+    - cosmetologist
+    - counselor
+    - customer service representative
+    - dancer
+    - data analyst
+    - data scientist
+    - dentist
+    - dermatologist
+    - designer
+    - detective
+    - dietician
+    - doctor
+    - economist
+    - editor
+    - electrician
+    - engineer
+    - entrepreneur
+    - event planner
+    - executive assistant
+    - fashion designer
+    - farmer
+    - film director
+    - financial analyst
+    - firefighter
+    - fitness trainer
+    - flight attendant
+    - florist
+    - food service manager
+    - forensic scientist
+    - game designer
+    - geologist
+    - graphic designer
+    - hairdresser
+    - healthcare administrator
+    - historian
+    - homemaker
+    - hotel manager
+    - housekeeper
+    - housewife
+    - human resources specialist
+    - industrial designer
+    - information security analyst
+    - insurance agent
+    - interior designer
+    - investment banker
+    - journalist
+    - judge
+    - laboratory technician
+    - landscape architect
+    - lawyer
+    - lecturer
+    - librarian
+    - life coach
+    - literary agent
+    - loan officer
+    - logistics coordinator
+    - management consultant
+    - marketing specialist
+    - massage therapist
+    - mechanical engineer
+    - medical assistant
+    - medical laboratory technician
+    - medical records technician
+    - medical technologist
+    - merchant navy
+    - meteorologist
+    - microbiologist
+    - military officer
+    - musician
+    - not working
+    - nurse
+    - optometrist
+    - orthodontist
+    - paralegal
+    - paramedic
+    - patent attorney
+    - personal trainer
+    - pharmacist    
+    - photographer
+    - physical therapist
+    - physician assistant
+    - pilot
+    - plumber
+    - police officer
+    - politician
+    - product manager
+    - professor
+    - project manager
+    - psychiatrist
+    - psychologist
+    - public relations specialist
+    - real estate agent
+    - receptionist
+    - research intern
+    - research scientist
+    - restaurant manager
+    - sales representative
+    - school administrator
+    - scientist
+    - social media manager
+    - social worker
+    - software developer
+    - speech therapist
+    - sports coach
+    - stockbroker
+    - student
+    - surgeon
+    - system administrator
+    - tax accountant
+    - teacher
+    - technical writer
+    - technician
+    - travel agent
+    - truck driver
+    - veterinarian
+    - video game developer
+    - waiter
+    - waitress
+    - web developer
+    - writer
+

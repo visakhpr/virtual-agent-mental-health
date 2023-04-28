@@ -1,0 +1,308 @@
+version: "3.1"
+
+stories:
+- story: taking medications details
+  steps: 
+  - action: utter_medications_b
+  - intent: affirm
+  - action: action_save_qa
+  - action: utter_medications_details
+  - intent: medications_details
+  - action: action_save_qa
+  - action: utter_psychologist_consultation_buttons
+  - intent: psychologist_consultation
+  - action: action_save_qa
+  - action: utter_psychologist_consultation_buttons
+
+- story: not taking medications 
+  steps: 
+  - action: utter_medications_b
+  - intent: deny
+  - action: action_save_qa
+  - action: utter_psychologist_consultation_buttons
+
+
+- story: have visited psychologist before
+  steps:
+  - action: utter_psychologist_consultation_buttons
+  - intent: affirm
+  - action: action_save_qa
+  - action: utter_mood_inquiry_b
+
+- story: not visited psychologist before
+  steps:
+  - action: utter_psychologist_consultation_buttons
+  - intent: deny
+  - action: action_save_qa
+  - action: utter_mood_inquiry_b
+
+ 
+
+# happy thought stories
+- story: happy_mood
+  steps:
+  - action: utter_mood_inquiry_b
+  - intent: happy
+  - action: utter_happy_thought
+  - intent: happy_thought
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_thoughts_or_images
+
+# Sad thought stories
+- story: sad_mood
+  steps:
+  - action: utter_mood_inquiry_b
+  - intent: sad
+  - action: utter_sad_thought
+  - intent: sad_thought
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_thoughts_or_images
+
+# angry thought stories
+- story: angry_mood
+  steps:
+  - action: utter_mood_inquiry_b
+  - intent: angry
+  - action: utter_angry_thought
+  - intent: angry_thought
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_thoughts_or_images
+
+# anxious thought stories
+- story: anxious_mood
+  steps:
+  - action: utter_mood_inquiry_b
+  - intent: anxiety
+  - action: utter_anxiety_thought
+  - intent: anxiety_thought
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_thoughts_or_images
+
+# stressed thought stories
+- story: stressed_mood
+  steps:
+  - action: utter_mood_inquiry_b
+  - intent: stress
+  - action: utter_stress_thought
+  - intent: stress_thought
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_thoughts_or_images
+
+# bored thought stories
+- story: bore_mood
+  steps:
+  - action: utter_mood_inquiry_b
+  - intent: bore
+  - action: utter_bore_thought
+  - intent: bore_thought
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_thoughts_or_images
+
+# confused thought stories
+- story: confused_mood
+  steps:
+  - action: utter_mood_inquiry_b
+  - intent: confused
+  - action: utter_confused_thought
+  - intent: confused_thought
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_thoughts_or_images
+
+# normal thought stories
+- story: normal_mood
+  steps:
+  - action: utter_mood_inquiry_b
+  - intent: normal
+  - action: utter_normal_thought
+  - intent: normal_thought
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_thoughts_or_images
+
+- story: user mind
+  steps: 
+  - action: utter_thoughts_or_images
+  - intent: images_or_thoughts
+  - action: action_save_qa
+  - action: utter_scared
+  - intent: scared
+  - action: action_save_qa
+  - action: utter_problems
+  - intent: problems
+  - action: action_save_qa
+  - action: utter_problems_cause
+  - intent: problems_cause
+  - action: action_save_qa
+  - action: utter_help_problems
+  - intent: help_problems
+  - action: action_save_qa
+  - action: utter_delusions
+  - intent: delusions
+  - action: action_save_qa
+  - action: utter_different
+  - intent: different
+  - action: action_save_qa
+  - action: utter_stamped_letter_b
+
+  ## Stories for responding to Judgement questions
+# Stamped letter
+- story: Right response to stamped letter
+  steps:   
+  - action: utter_stamped_letter_b
+  - intent: right_response
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_judgement_response
+  - action: utter_unnatural
+
+- story: Destroying stamped letter
+  steps:
+  - action: utter_stamped_letter_b
+  - intent: destroy
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_judgement_response
+  - action: utter_unnatural
+- story: Ignoring stamped letter
+  steps:
+  - action: utter_stamped_letter_b
+  - intent: ignoring
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_judgement_response
+  - action: utter_unnatural
+
+- story: Opening stamped letter
+  steps:
+  - action: utter_stamped_letter_b
+  - intent: open_letter
+  - action: action_save_qa # action to save the bot question and user answer
+  - action: utter_judgement_response
+  - action: utter_unnatural
+
+- story: thought_content
+  steps:
+  - action: utter_unnatural
+  - intent: unnatural
+  - action: action_save_qa
+  - action: utter_harm_you
+  - intent: harm_you
+  - action: action_save_qa
+  - action: utter_hallucinations
+  - intent: hallucinations
+  - action: action_save_qa
+  - action: utter_illusions
+  - intent: illusions
+  - action: action_save_qa
+  - action: utter_movie_theater_smoke_b
+
+- story: Right response to movie theater smoke
+  steps:
+  - action: utter_movie_theater_smoke_b
+  - intent: right_response
+  - action: action_save_qa
+  - action: utter_judgement_response
+  - action: utter_suicidal_buttons
+
+- story: Ignoring movie theater smoke
+  steps:
+  - action: utter_movie_theater_smoke_b
+  - intent: ignoring
+  - action: action_save_qa
+  - action: utter_judgement_response
+  - action: utter_suicidal_buttons
+
+- story: Waiting for response
+  steps:
+  - action: utter_movie_theater_smoke_b
+  - intent: wait
+  - action: action_save_qa
+  - action: utter_judgement_response
+  - action: utter_suicidal_buttons
+
+- story: Leaving the movie theater
+  steps:
+  - action: utter_movie_theater_smoke_b
+  - intent: leave
+  - action: action_save_qa
+  - action: utter_judgement_response
+  - action: utter_suicidal_buttons
+
+- story: suicidal thoughts
+  steps: 
+  - action: utter_suicidal_buttons
+  - intent: affirm
+  - action: action_save_qa
+  - action: utter_homicidal_buttons
+
+
+- story: no suicidal thoughts
+  steps: 
+  - action: utter_suicidal_buttons
+  - intent: deny
+  - action: action_save_qa
+  - action: utter_homicidal_buttons
+
+- story: homicidal thoughts
+  steps: 
+  - action: utter_homicidal_buttons
+  - intent: affirm
+  - action: utter_very_personal
+  - intent: homicidal
+  - action: action_save_qa
+  - action: utter_alcohol_consumption_buttons
+
+
+- story: no homicidal thoughts
+  steps: 
+  - action: utter_homicidal_buttons
+  - intent: deny
+  - action: action_save_qa
+  - action: utter_alcohol_consumption_buttons
+
+
+- story: alcohol_consumption
+  steps: 
+  - action: utter_alcohol_consumption_buttons
+  - intent: affirm
+  - action: action_save_qa
+  - action: utter_CutDown_buttons
+
+- story: yes consumes alcohol
+  steps: 
+  - action: utter_CutDown_buttons
+  - intent: affirm_Cage
+  - action: action_save_qa
+  - action: utter_Annoyed_buttons
+  - intent: affirm_Cage
+  - action: action_save_qa
+  - action: utter_Guilty_buttons
+  - intent: affirm_Cage
+  - action: action_save_qa
+  - action: utter_EyeOpener_buttons
+  - intent: affirm_Cage
+  - action: action_save_qa
+  - action: utter_end_botresponse
+  - intent: goodbye
+
+- story: denying Cage
+  steps: 
+  - action: utter_CutDown_buttons
+  - intent: deny_Cage
+  - action: action_save_qa
+  - action: utter_Annoyed_buttons
+  - intent: deny_Cage
+  - action: action_save_qa
+  - action: utter_Guilty_buttons
+  - intent: deny_Cage
+  - action: action_save_qa
+  - action: utter_EyeOpener_buttons
+  - intent: deny_Cage
+  - action: action_save_qa
+  - action: utter_end_botresponse
+  - intent: goodbye
+
+- story: no_alcohol_consumption
+  steps: 
+  - action: utter_alcohol_consumption_buttons
+  - intent: deny
+  - action: action_save_qa
+  - action: utter_end_botresponse
+  - intent: goodbye
+  - action: action_extract_keywords
